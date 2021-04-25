@@ -13,3 +13,8 @@ npx install-peerdeps --dev @imaginary-cloud/eslint-config-react
 ```
 
 \
+### Deploy
+
+<https://github.com/JamesIves/github-pages-deploy-action>
+
+\
