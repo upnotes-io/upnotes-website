@@ -3,3 +3,4 @@ artifacts/
 .vscode
 yarn.lock
 dist/
+tmp/
