@@ -19,5 +19,4 @@ jobs:
           folder: dist # The folder the action should deploy.
           CLEAN: true
           SSH: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAGES_DEPLOY_KEY }}
+          ssh-key: ${{ secrets.DEPLOY_KEY_GH_PAGES }}

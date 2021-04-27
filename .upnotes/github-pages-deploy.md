@@ -29,4 +29,6 @@ Note: It can take up to 20 minutes for changes to your site to publish after you
 ```
 
 \
-\
+Create and add SSH deploy key:
+
+<https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-create-ssh-deploy-key>
