@@ -19,4 +19,4 @@ jobs:
           folder: dist # The folder the action should deploy.
           CLEAN: true
           SSH: true
-          ssh-key: ${{ secrets.DEPLOY_KEY_GH_PAGES }}
+          ssh-key: ${{ secrets.GH_PAGES_PRIVATE_KEY }}
