@@ -1,4 +1,5 @@
 node_modules/
 artifacts/
 .vscode
-yarn.lock
+dist/
+tmp/
