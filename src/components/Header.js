@@ -22,11 +22,11 @@ const headersData = [
     href: "https://github.com/upnotes-io/upnotes-website/issues/new",
     target: "_blank",
   },
-  {
-    label: "Blogs",
-    href: "/blog",
-    target: "none",
-  },
+  // {
+  //   label: "Blogs",
+  //   href: "/blog",
+  //   target: "none",
+  // },
   {
     label: "Download",
     href: "/download",
@@ -175,14 +175,14 @@ export default function Header() {
   };
 
   const upnotesLogo = (
-    <div className={headerBrand}>
+    <a href={'/'} className={headerBrand}>
       <Icon className={iconRoot}>
         <img className={imageIcon} src="/assets/icon.svg" />
       </Icon>
       <Typography variant="h6" component="h1" className={logo}>
         Upnotes
       </Typography>
-    </div>
+    </a>
   );
 
   const getMenuButtons = () => {
@@ -192,7 +192,7 @@ export default function Header() {
           {...{
             key: label,
             color: "inherit",
-            to: href,
+            href: href,
             target,
             className: menuButton,
           }}

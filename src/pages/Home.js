@@ -5,8 +5,8 @@ export default function Home() { return (
       className="w3-container w3-red w3-center"
       style={{ padding: '128px 16px' }}
     >
-      <h1 className="w3-margin w3-jumbo">UP NOTES</h1>
-      <h2 className="w3-xlarge">A notes app for software engineers</h2>
+      <h1 className="w3-margin w3-jumbo">Upnotes</h1>
+      <h2 className="w3-xlarge">Automatically organize your software engineering notes.</h2>
       <button className="w3-button w3-black w3-padding-large w3-large w3-margin-top">
         Download
       </button>
