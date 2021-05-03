@@ -1,20 +1,6 @@
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
-import { makeStyles, Paper } from '@material-ui/core';
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: 'center',
-    // color: theme.palette.text.secondary,
-  },
-}));
 
 export default function Home() {
-  const classes = useStyles();
   return (
     <div className="content">
       <div
@@ -54,7 +40,7 @@ export default function Home() {
       <div id={"shared-tasks"} className="w3-row-padding w3-light-grey w3-padding-64 w3-container">
         <div className="w3-content detail-container" >
           <div className="w3-center detail-image-container">
-            <img src={`assets/shared-tasks.png`} height={450} alt={`shared tasks image`} />
+            <img src={`assets/shared-tasks.png`} height={450} alt={`shared tasks`} />
           </div>
 
           <div className="detail-content-container">
@@ -98,7 +84,7 @@ export default function Home() {
           </div>
 
           <div className="w3-center detail-image-container">
-            <img src={`assets/shared-tasks.png`} height={450} alt={`shared tasks image`} />
+            <img src={`assets/shared-tasks.png`} height={450} alt={`my tasks `} />
           </div>
         </div>
       </div>
@@ -106,7 +92,7 @@ export default function Home() {
       <div id={'my-wiki'} className="w3-row-padding w3-light-grey w3-padding-64 w3-container">
         <div className="w3-content detail-container" >
           <div className="w3-center detail-image-container">
-            <img src={`assets/shared-tasks.png`} height={450} alt={`shared tasks image`} />
+            <img src={`assets/shared-tasks.png`} height={450} alt={`my wiki`} />
           </div>
 
           <div className="detail-content-container">
@@ -146,7 +132,7 @@ export default function Home() {
           </div>
 
           <div className="w3-center detail-image-container">
-            <img src={`assets/shared-tasks.png`} height={450} alt={`shared tasks image`} />
+            <img src={`assets/shared-tasks.png`} height={450} alt={`your shared wiki`} />
           </div>
         </div>
       </div>
@@ -154,7 +140,7 @@ export default function Home() {
       <div id={'meetings'} className="w3-row-padding w3-light-grey w3-padding-64 w3-container">
         <div className="w3-content detail-container" >
           <div className="w3-center detail-image-container">
-            <img src={`assets/shared-tasks.png`} height={450} alt={`shared tasks image`} />
+            <img src={`assets/shared-tasks.png`} height={450} alt={`meetings`} />
           </div>
 
           <div className="detail-content-container">

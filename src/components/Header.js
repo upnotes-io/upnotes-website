@@ -177,7 +177,7 @@ export default function Header() {
   const upnotesLogo = (
     <a href={'/'} className={headerBrand}>
       <Icon className={iconRoot}>
-        <img className={imageIcon} src="/assets/icon.svg" />
+        <img className={imageIcon} src="/assets/icon.svg" alt="logo" />
       </Icon>
       <Typography variant="h6" component="h1" className={logo}>
         Upnotes
