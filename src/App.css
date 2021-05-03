@@ -650,6 +650,13 @@ a {
   .w3-col.m12 {
     width: 99.99999%;
   }
+  .detail-image-container {
+    width: 40%;
+  }
+  
+  .detail-content-container {
+    width: 50%;
+  }
 }
 @media (min-width: 993px) {
   .w3-col.l1 {
@@ -768,6 +775,15 @@ a {
   .w3-dropdown-click.w3-mobile,
   .w3-dropdown-click.w3-mobile .w3-btn,
   .w3-dropdown-click.w3-mobile .w3-button {
+    width: 100%;
+  }
+  .detail-container {
+    flex-direction: column; 
+  }
+  .detail-image-container {
+     width: 100%;  
+  }
+  .detail-content-container {
     width: 100%;
   }
 }
@@ -1651,3 +1667,10 @@ a {
 .w3-hover-border-pale-blue:hover {
   border-color: #e7ffff !important;
 }
+
+.detail-container {
+  display: flex; 
+  justify-content: space-between;
+}
+
+
