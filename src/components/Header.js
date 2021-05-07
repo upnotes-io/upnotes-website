@@ -36,7 +36,7 @@ const headersData = [
 
 const useStyles = makeStyles(() => ({
   header: {
-    backgroundColor: "#FFEB3B",
+    backgroundColor: "#0a7cef",
     paddingRight: "79px",
     paddingLeft: "79px",
     "@media (max-width: 900px)": {
@@ -71,8 +71,8 @@ const useStyles = makeStyles(() => ({
   },
   iconRoot: {
     textAlign: "center",
-    height: "48px",
-    width: "48px",
+    height: "36px",
+    width: "36px",
   },
   headerBrand: {
     display: "flex",
