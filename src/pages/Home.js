@@ -9,9 +9,9 @@ export default function Home() {
       >
         <h1 className="w3-margin w3-jumbo">Upnotes</h1>
         <h2 className="w3-xlarge">Automatically organize your software engineering notes.</h2>
-        <button className="w3-button w3-black w3-padding-large w3-large w3-margin-top">
+        <a href="https://github.com/upnotes-io/upnotes-website/releases/latest" className="w3-button w3-black w3-padding-large w3-large w3-margin-top">
           <span> Download </span>
-        </button>
+        </a>
       </div>
       <div className="w3-row-padding w3-padding-64 w3-container">
         <div className="w3-content">

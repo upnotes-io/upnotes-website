@@ -29,8 +29,8 @@ const headersData = [
   // },
   {
     label: "Download",
-    href: "/download",
-    target: "none",
+    href: "https://github.com/upnotes-io/upnotes-website/releases/latest",
+    target: "_blank",
   },
 ];
 
