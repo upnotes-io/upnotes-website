@@ -7,7 +7,7 @@ import ReactGA from 'react-ga';
 
 function App() {
   React.useEffect(()=>{
-    ReactGA.initialize('G-7XPBWVV3BQ');
+    ReactGA.initialize('UA-196765342-1', {debug: true});
     ReactGA.pageview(window.location.pathname + window.location.search);
   })
 
