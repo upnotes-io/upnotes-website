@@ -5,10 +5,10 @@ export default function Home() {
     <div className="content">
       <div
         className="w3-container w3-red w3-center"
-        style={{ padding: '128px 16px' }}
+        style={{ padding: '128px 16px'}}
       >
-        <h1 className="w3-margin w3-jumbo">Upnotes</h1>
-        <h2 className="w3-xlarge">Automatically organize your software engineering notes.</h2>
+        <h1 className="w3-margin w3-jumbo" style={{color: 'black'}}>Upnotes</h1>
+        <h2 className="w3-xlarge" style={{color: 'black'}}>Automatically organize your software engineering notes.</h2>
         <a href="https://github.com/upnotes-io/upnotes-website/releases/latest" className="w3-button w3-black w3-padding-large w3-large w3-margin-top">
           <span> Download </span>
         </a>

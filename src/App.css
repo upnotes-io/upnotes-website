@@ -1359,7 +1359,7 @@ a {
 .w3-red,
 .w3-hover-red:hover {
   color: #fff !important;
-  background-color: rgb(131, 164, 197) !important;
+  background-color:rgba(255, 255, 0, 0.55) !important;
 }
 .w3-sand,
 .w3-hover-sand:hover {
