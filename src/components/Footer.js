@@ -10,7 +10,7 @@ const Footer = function(){
         <i className="fa fa-twitter w3-hover-opacity"></i>
         <i className="fa fa-linkedin w3-hover-opacity"></i>
      </div>
-     <p>Powered by upnotes.io</p>
+     <p><a href="https://upnotes.io"> upnotes.io </a></p>
     </footer>
 }
 
