@@ -12,7 +12,7 @@ export default function Home() {
       setTag(tags[0].name.substr(1)); // Ex: v1.0.3-beta but download link require without v.
     }
     getTag();
-  }, [tag == null]);
+  }, [tag]);
   return (
     <div className="content">
       <div
