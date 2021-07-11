@@ -1,4 +1,6 @@
 import React, {useEffect, useState} from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faWindows, faApple, faLinux} from '@fortawesome/free-brands-svg-icons';
 
 export default function Home() {
   let [tag, setTag] = useState(null);
@@ -143,12 +145,21 @@ export default function Home() {
         </div>
       </div>
 
-      <div id={'download'} className="w3-row-padding w3-light-grey w3-padding-64 w3-container">
-        {tag == null ? <div><p>Getting latest version...</p></div> : <div>
-          <div><a href={`https://github.com/upnotes-io/upnotes-website/releases/download/v${tag}/Upnotes-${tag}.exe`}>Windows</a></div>
-          <div><a href={`https://github.com/upnotes-io/upnotes-website/releases/download/v${tag}/Upnotes-${tag}.AppImage`}>Linux</a></div>
-          <div><a href={`https://github.com/upnotes-io/upnotes-website/releases/download/v${tag}/Upnotes-${tag}.dmg`}>Mac</a></div>
-          </div>
+      <div id={'download'} style={{'max-width': '1024px', margin: 'auto'}} className="w3-row-padding w3-padding-64 w3-container">
+        {tag == null ? <div><p>Getting latest version...</p></div> :
+            <div>
+              <div style={{ display: 'flex',
+                'flex-direction': 'row',
+                'justify-content': 'space-between',
+                'max-width': '1024px',
+                'margin': 'auto',
+                'font-size': 'xx-large',
+              }}>
+                <div><a href={`https://github.com/upnotes-io/upnotes-website/releases/download/v${tag}/Upnotes-${tag}.exe`}><FontAwesomeIcon icon={faWindows} /> <span>Windows</span></a></div>
+                <div><a href={`https://github.com/upnotes-io/upnotes-website/releases/download/v${tag}/Upnotes-${tag}.AppImage`}><FontAwesomeIcon icon={faLinux} /> <span>Linux</span></a></div>
+                <div><a href={`https://github.com/upnotes-io/upnotes-website/releases/download/v${tag}/Upnotes-${tag}.dmg`}><FontAwesomeIcon icon={faApple} /> <span>Mac</span></a></div>
+              </div>
+            </div>
         }
       </div>
     </div>

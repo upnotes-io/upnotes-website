@@ -29,7 +29,7 @@ const headersData = [
   // },
   {
     label: "Download",
-    href: "https://github.com/upnotes-io/upnotes-website/releases/latest",
+    href: "#download",
     target: "_blank",
   },
 ];
