@@ -24,3 +24,5 @@ yarn-error.log*
 artifacts/
 dist/
 tmp/
+.upnotes
+.idea

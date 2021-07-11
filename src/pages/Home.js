@@ -1,6 +1,16 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
 export default function Home() {
+  let [tag, setTag] = useState(null);
+  useEffect(() => {
+    const getTag = async () => {
+      // https://docs.github.com/en/rest/reference/repos#list-repository-tags
+      const response = await fetch('https://api.github.com/repos/upnotes-io/upnotes-website/tags');
+      const tags = await response.json(); //extract JSON from the http response
+      setTag(tags[0].name.substr(1)); // Ex: v1.0.3-beta but download link require without v.
+    }
+    getTag();
+  }, [tag == null]);
   return (
     <div className="content">
       <div
@@ -13,7 +23,7 @@ export default function Home() {
           WebkitTextFillColor: 'transparent',
         }}>Upnotes</h1>
         <h2 className="w3-xlarge" style={{color: 'black'}}>Automatically organize your software engineering notes.</h2>
-        <a href="https://github.com/upnotes-io/upnotes-website/releases/latest" className="w3-button w3-black w3-padding-large w3-large w3-margin-top">
+        <a href="#download" className="w3-button w3-black w3-padding-large w3-large w3-margin-top">
           <span> Download </span>
         </a>
       </div>
@@ -131,6 +141,15 @@ export default function Home() {
             </p>
           </div>
         </div>
+      </div>
+
+      <div id={'download'} className="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        {tag == null ? <div><p>Getting latest version...</p></div> : <div>
+          <div><a href={`https://github.com/upnotes-io/upnotes-website/releases/download/v${tag}/Upnotes-${tag}.exe`}>Windows</a></div>
+          <div><a href={`https://github.com/upnotes-io/upnotes-website/releases/download/v${tag}/Upnotes-${tag}.AppImage`}>Linux</a></div>
+          <div><a href={`https://github.com/upnotes-io/upnotes-website/releases/download/v${tag}/Upnotes-${tag}.dmg`}>Mac</a></div>
+          </div>
+        }
       </div>
     </div>
   )
