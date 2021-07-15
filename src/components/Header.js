@@ -13,6 +13,11 @@ import React, { useState, useEffect } from "react";
 import Icon from "@material-ui/core/Icon";
 const headersData = [
   {
+    label: "Join Chat",
+    href: "https://discord.gg/ATZTMeyWsW",
+    target: "_blank",
+  },
+  {
     label: "Github",
     href: "https://github.com/upnotes-io/",
     target: "_blank",
