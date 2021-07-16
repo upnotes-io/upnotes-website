@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faWindows, faApple, faLinux} from '@fortawesome/free-brands-svg-icons';
-
+import { Slide } from "react-slideshow-image";
+import "react-slideshow-image/dist/styles.css";
 export default function Home() {
   let [tag, setTag] = useState(null);
 
@@ -40,20 +41,39 @@ export default function Home() {
     getTag();
   }, [tag]);
 
+  const slideImages = [
+    "/assets/onboarding.png",
+    "/assets/note-view.png",
+  ];
 
+  const properties = {
+    duration: 5000,
+    autoplay: true,
+    transitionDuration: 500,
+    arrows: true,
+    infinite: false,
+    easing: "ease",
+    indicators: true,
+  };
 
   return (
     <div className="content">
       <div
         className="w3-container w3-center"
-        style={{ padding: '128px 16px'}}
+        style={{ padding: '48px 16px'}}
       >
-        <h1 className="w3-margin w3-jumbo"  style={{
-          background: '-webkit-linear-gradient(#eb543b, #fbd51c)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-        }}>Upnotes</h1>
-        <h2 className="w3-xlarge" style={{color: 'black'}}>Automatically organize your software engineering notes.</h2>
+        <div style={{height: '600px'}}>
+          <Slide {...properties}>
+
+            {slideImages.map((each, index) => (
+                <div className="each-slide">
+                  <img style={{ objectFit: 'cover', height: '600px'}} src={slideImages[index]}/>
+                </div>
+            ))}
+          </Slide>
+        </div>
+
+        <h2 className="w3-xlarge w3-padding-32" style={{color: 'black'}}>Automatically organize your software engineering notes.</h2>
         <a href={downloadHref} className="w3-button w3-text-black w3-padding-large w3-large w3-margin-top">
           <FontAwesomeIcon icon={getOSIcon()} />
           <span> Download </span>
