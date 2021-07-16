@@ -18,11 +18,6 @@ const headersData = [
     target: "_blank",
   },
   {
-    label: "Github",
-    href: "https://github.com/upnotes-io/",
-    target: "_blank",
-  },
-  {
     label: "Report Issue",
     href: "https://github.com/upnotes-io/upnotes-website/issues/new",
     target: "_blank",

@@ -4,15 +4,44 @@ import {faWindows, faApple, faLinux} from '@fortawesome/free-brands-svg-icons';
 
 export default function Home() {
   let [tag, setTag] = useState(null);
+
+  let [downloadHref, setDownloadHref] = useState("#download");
+  function getOSIcon() {
+    if (downloadHref.endsWith(".exe")) {
+      return faWindows;
+    } else if (downloadHref.endsWith(".AppImage")) {
+      return faLinux;
+    } else {
+      return faApple;
+    }
+  }
+  function getWindowsHref(tag) {
+    return `https://github.com/upnotes-io/upnotes-website/releases/download/v${tag}/Upnotes-${tag}.exe`;
+  }
+
+  function getLinuxHref(tag) {
+    return `https://github.com/upnotes-io/upnotes-website/releases/download/v${tag}/Upnotes-${tag}.AppImage`;
+  }
+
+  function getMacHref(tag) {
+    return `https://github.com/upnotes-io/upnotes-website/releases/download/v${tag}/Upnotes-${tag}.dmg`;
+  }
   useEffect(() => {
     const getTag = async () => {
       // https://docs.github.com/en/rest/reference/repos#list-repository-tags
       const response = await fetch('https://api.github.com/repos/upnotes-io/upnotes-website/tags');
       const tags = await response.json(); //extract JSON from the http response
       setTag(tags[0].name.substr(1)); // Ex: v1.0.3-beta but download link require without v.
+      if (navigator.appVersion.indexOf("Win") !== -1) setDownloadHref(getWindowsHref(tag));
+      if (navigator.appVersion.indexOf("Mac") !== -1) setDownloadHref(getMacHref(tag));
+      if (navigator.appVersion.indexOf("X11") !== -1) setDownloadHref(getLinuxHref(tag));
+      if (navigator.appVersion.indexOf("Linux") !== -1) setDownloadHref(getLinuxHref(tag));
     }
     getTag();
   }, [tag]);
+
+
+
   return (
     <div className="content">
       <div
@@ -25,7 +54,8 @@ export default function Home() {
           WebkitTextFillColor: 'transparent',
         }}>Upnotes</h1>
         <h2 className="w3-xlarge" style={{color: 'black'}}>Automatically organize your software engineering notes.</h2>
-        <a href="#download" className="w3-button w3-black w3-padding-large w3-large w3-margin-top">
+        <a href={downloadHref} className="w3-button w3-text-black w3-padding-large w3-large w3-margin-top">
+          <FontAwesomeIcon icon={getOSIcon()} />
           <span> Download </span>
         </a>
       </div>
@@ -155,9 +185,9 @@ export default function Home() {
                 'margin': 'auto',
                 'font-size': 'xx-large',
               }}>
-                <div><a href={`https://github.com/upnotes-io/upnotes-website/releases/download/v${tag}/Upnotes-${tag}.exe`}><FontAwesomeIcon icon={faWindows} /> <span>Windows</span></a></div>
-                <div><a href={`https://github.com/upnotes-io/upnotes-website/releases/download/v${tag}/Upnotes-${tag}.AppImage`}><FontAwesomeIcon icon={faLinux} /> <span>Linux</span></a></div>
-                <div><a href={`https://github.com/upnotes-io/upnotes-website/releases/download/v${tag}/Upnotes-${tag}.dmg`}><FontAwesomeIcon icon={faApple} /> <span>Mac</span></a></div>
+                <div><a href={getWindowsHref()}><FontAwesomeIcon icon={faWindows} /> <span>Windows</span></a></div>
+                <div><a href={getLinuxHref()}><FontAwesomeIcon icon={faLinux} /> <span>Linux</span></a></div>
+                <div><a href={getMacHref()}><FontAwesomeIcon icon={faApple} /> <span>Mac</span></a></div>
               </div>
             </div>
         }
