@@ -60,7 +60,7 @@ export default function Home() {
     <div className="content">
       <div
         className="w3-container w3-center"
-        style={{ padding: '48px 16px'}}
+        style={{ padding: '48px 16px', background: 'antiquewhite'}}
       >
         <div style={{height: '600px'}}>
           <Slide {...properties}>
