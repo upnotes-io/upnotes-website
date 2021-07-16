@@ -67,7 +67,7 @@ export default function Home() {
 
             {slideImages.map((each, index) => (
                 <div className="each-slide">
-                  <img style={{ objectFit: 'cover', height: '600px'}} src={slideImages[index]}/>
+                  <img style={{ objectFit: 'cover', height: '600px'}} src={slideImages[index]} alt="slide images"/>
                 </div>
             ))}
           </Slide>
