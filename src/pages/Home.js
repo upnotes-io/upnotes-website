@@ -126,9 +126,9 @@ export default function Home() {
                 'margin': 'auto',
                 'font-size': 'xx-large',
               }}>
-                <div><ReactGA.OutboundLink eventLabel="download-2-windows" to={getWindowsHref()}><FontAwesomeIcon icon={faWindows} /> <span>Windows</span></ReactGA.OutboundLink></div>
-                <div><ReactGA.OutboundLink eventLabel="download-2-linux" to={getLinuxHref()}><FontAwesomeIcon icon={faLinux} /> <span>Linux</span></ReactGA.OutboundLink></div>
-                <div><ReactGA.OutboundLink eventLabel="download-2-mac" to={getMacHref()}><FontAwesomeIcon icon={faApple} /> <span>Mac</span></ReactGA.OutboundLink></div>
+                <div><ReactGA.OutboundLink eventLabel="download-2-windows" to={getWindowsHref(tag)}><FontAwesomeIcon icon={faWindows} /> <span>Windows</span></ReactGA.OutboundLink></div>
+                <div><ReactGA.OutboundLink eventLabel="download-2-linux" to={getLinuxHref(tag)}><FontAwesomeIcon icon={faLinux} /> <span>Linux</span></ReactGA.OutboundLink></div>
+                <div><ReactGA.OutboundLink eventLabel="download-2-mac" to={getMacHref(tag)}><FontAwesomeIcon icon={faApple} /> <span>Mac</span></ReactGA.OutboundLink></div>
               </div>
             </div>
         }
