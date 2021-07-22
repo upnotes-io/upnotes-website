@@ -10,7 +10,7 @@ function App() {
 
   React.useEffect(()=>{
     console.log("env:" + process.env.NODE_ENV);
-    if (development) {
+    if (!development) {
       ReactGA.initialize('UA-196765342-1', {debug: true});
       ReactGA.pageview(window.location.pathname + window.location.search);
     }
