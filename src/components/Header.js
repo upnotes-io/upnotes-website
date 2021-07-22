@@ -11,16 +11,19 @@ import {
 import MenuIcon from "@material-ui/icons/Menu";
 import React, { useState, useEffect } from "react";
 import Icon from "@material-ui/core/Icon";
+import ReactGA from 'react-ga';
 const headersData = [
   {
     label: "Join Chat",
     href: "https://discord.gg/ATZTMeyWsW",
     target: "_blank",
+    eventLabel: "join_chat",
   },
   {
     label: "Report Issue",
     href: "https://github.com/upnotes-io/upnotes-website/issues/new",
     target: "_blank",
+    eventLabel: "report_issue",
   },
   // {
   //   label: "Blogs",
@@ -31,6 +34,7 @@ const headersData = [
     label: "Download",
     href: "#download",
     target: "_blank",
+    eventLabel: "download_header",
   },
 ];
 
@@ -186,19 +190,20 @@ export default function Header() {
   );
 
   const getMenuButtons = () => {
-    return headersData.map(({ label, href, target }) => {
+    return headersData.map(({ label, href, target, eventLabel }) => {
       return (
-        <a
+        <ReactGA.OutboundLink
           {...{
             key: label,
             color: "inherit",
-            href: href,
+            to: href,
+            eventLabel: eventLabel,
             target,
             className: menuButton,
           }}
         >
           {label}
-        </a>
+        </ReactGA.OutboundLink>
       );
     });
   };

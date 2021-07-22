@@ -90,7 +90,8 @@ export default function Home() {
 
         <h2 className="w3-xlarge w3-padding-32" style={{color: 'black'}}>Automatically organize your software engineering notes.</h2>
         <ReactGA.OutboundLink
-            className="w3-button w3-text-black w3-padding-large w3-large w3-margin-top"
+            style={{backgroundColor: "#f16f3d"}}
+            className="w3-button w3-text-white w3-padding-large w3-large w3-margin-top"
             eventLabel={`download-1-${os}`}
             to={downloadHref}
         >
