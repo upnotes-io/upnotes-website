@@ -72,7 +72,7 @@ export default function Home() {
   };
 
   return (
-    <div className="pb-16" style={{background: 'antiquewhite'}} >
+    <div className="pb-16 pl-8 pr-8" style={{background: 'antiquewhite'}} >
       <div className="max-w-screen-lg mx-auto pt-24">
         <div className="mx-auto" style={{height: '600px'}}>
           <Slide {...properties}>

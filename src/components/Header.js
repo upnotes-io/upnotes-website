@@ -117,7 +117,7 @@ export default function Header() {
     return (
       <Toolbar className={toolbar}>
         {upnotesLogo}
-        <div>{getMenuButtons()}</div>
+        <div className="sm:flex sm:flex-column">{getMenuButtons()}</div>
       </Toolbar>
     );
   };
@@ -149,7 +149,7 @@ export default function Header() {
             onClose: handleDrawerClose,
           }}
         >
-          <div className={drawerContainer}>{getDrawerChoices()}</div>
+          <div className={`${drawerContainer} flex flex-col`}>{getDrawerChoicesMobile()}</div>
         </Drawer>
 
         <div>{upnotesLogo}</div>
@@ -157,7 +157,7 @@ export default function Header() {
     );
   };
 
-  const getDrawerChoices = () => {
+  const getDrawerChoicesMobile = () => {
     return headersData.map(({ label, href, target }) => {
       return (
         <a
