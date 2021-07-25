@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Upnotes 
+
+[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/upnotes)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
