@@ -3,10 +3,8 @@ import {
   Toolbar,
   Typography,
   makeStyles,
-  // Button,
   IconButton,
   Drawer,
-  // MenuItem,
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import React, { useState, useEffect } from "react";
@@ -33,7 +31,6 @@ const headersData = [
   {
     label: "Download",
     href: "#download",
-    target: "_blank",
     eventLabel: "download_header",
   },
 ];

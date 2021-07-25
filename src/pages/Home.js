@@ -72,40 +72,37 @@ export default function Home() {
   };
 
   return (
-    <div className="content">
-      <div
-        className="w3-container w3-center"
-        style={{ padding: '48px 16px', background: 'antiquewhite'}}
-      >
-        <div style={{height: '600px'}}>
+    <div className="pb-16" style={{background: 'antiquewhite'}} >
+      <div className="max-w-screen-lg mx-auto pt-24">
+        <div className="mx-auto" style={{height: '600px'}}>
           <Slide {...properties}>
 
             {slideImages.map((each, index) => (
-                <div className="each-slide">
+                <div className="each-slide container flex justify-center">
                   <img style={{ objectFit: 'cover', height: '600px'}} src={slideImages[index]} alt="slide images"/>
                 </div>
             ))}
           </Slide>
         </div>
-
-        <h2 className="w3-xlarge w3-padding-32" style={{color: 'black'}}>Automatically organize your software engineering notes.</h2>
-        <ReactGA.OutboundLink
-            style={{backgroundColor: "#f16f3d"}}
-            className="w3-button w3-text-white w3-padding-large w3-large w3-margin-top"
-            eventLabel={`download-1-${os}`}
-            to={downloadHref}
-        >
-          <FontAwesomeIcon icon={getOSIcon()} />
-          <span> Download </span>
-        </ReactGA.OutboundLink>
+        <h2 className="text-lg text-center pt-8" style={{color: 'black'}}>Automatically organize your software engineering notes.</h2>
+        <div className="flex justify-center pt-8">
+          <ReactGA.OutboundLink
+              style={{backgroundColor: "#f16f3d"}}
+              className="hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 rounded"
+              eventLabel={`download-1-${os}`}
+              to={downloadHref}
+          >
+            <FontAwesomeIcon icon={getOSIcon()} />
+            <span> Download </span>
+          </ReactGA.OutboundLink>
+        </div>
       </div>
-      <div className="w3-row-padding w3-padding-64 w3-container">
-        <div className="w3-content">
-
+      <div className="flex justify-center text-lg">
+        <div >
             <h5 >
               Features
             </h5>
-            <p className="w3-text-black">
+            <p>
               <li> Automatically create notes based on your git branch</li>
               <li> Simple and powerful markdown editor with markdown and wysiwyg and split mode support </li>
               <li> Syntax highlight with support for most of the programming languages </li>
@@ -117,20 +114,12 @@ export default function Home() {
       </div>
 
 
-      <div id={'download'} style={{'max-width': '1024px', margin: 'auto'}} className="w3-row-padding w3-padding-64 w3-container">
+      <div id={'download'} className="max-w-screen-lg mx-auto pt-8">
         {tag == null ? <div><p>Getting latest version...</p></div> :
-            <div>
-              <div style={{ display: 'flex',
-                'flex-direction': 'row',
-                'justify-content': 'space-between',
-                'max-width': '1024px',
-                'margin': 'auto',
-                'font-size': 'xx-large',
-              }}>
-                <div><ReactGA.OutboundLink eventLabel="download-2-windows" to={getWindowsHref(tag)}><FontAwesomeIcon icon={faWindows} /> <span>Windows</span></ReactGA.OutboundLink></div>
-                <div><ReactGA.OutboundLink eventLabel="download-2-linux" to={getLinuxHref(tag)}><FontAwesomeIcon icon={faLinux} /> <span>Linux</span></ReactGA.OutboundLink></div>
-                <div><ReactGA.OutboundLink eventLabel="download-2-mac" to={getMacHref(tag)}><FontAwesomeIcon icon={faApple} /> <span>Mac</span></ReactGA.OutboundLink></div>
-              </div>
+            <div className="flex justify-between text-xl">
+              <div><ReactGA.OutboundLink eventLabel="download-2-windows" to={getWindowsHref(tag)}><FontAwesomeIcon icon={faWindows} /> <span>Windows</span></ReactGA.OutboundLink></div>
+              <div><ReactGA.OutboundLink eventLabel="download-2-linux" to={getLinuxHref(tag)}><FontAwesomeIcon icon={faLinux} /> <span>Linux</span></ReactGA.OutboundLink></div>
+              <div><ReactGA.OutboundLink eventLabel="download-2-mac" to={getMacHref(tag)}><FontAwesomeIcon icon={faApple} /> <span>Mac</span></ReactGA.OutboundLink></div>
             </div>
         }
       </div>
