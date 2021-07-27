@@ -97,22 +97,73 @@ export default function Home() {
           </ReactGA.OutboundLink>
         </div>
       </div>
-      <div className="flex justify-center text-lg">
-        <div >
-            <h5 >
-              Features
-            </h5>
+      <article className="pt-8 max-w-screen-lg text-lg mx-auto prose lg:prose-xl">
+        <div>
+        <h2 id="why-another-notes-app">Why another notes app?</h2>
+        <p>Developers spent lot of time investigating and figuring out how something should be done and writing final code that becomes part of your repository is just small part of the whole process. Over time I have realised that having good organisation of notes is critical for long term productivity.</p>
+        <p>There are tons of notes apps in the market with lot&#39;s of different features but none of them are specifically designed for software engineers.</p>
+
+        <p>Upnotes aims to specifically design a high quality, private notes app for software engineers. <br/> Upnotes is going to have tight integration with all the tools used by software engineers. We have started with git as most of us use git for our version control. </p>
+        <ol >
+          <li className="font-semibold">
+            We automatically create/organised notes by your repositories and auto create a new note based on your current git branch.
+          </li>
+          <li>
+            Documentation should be a natural extension of notes taken by you for your future self, that&#39;s why we have a specific area for you to write notes that should act like wiki. Eventually these notes can be shared with everyone once they reach certain maturity. Most of the projects have poor documentation and approaching documentation from the point of view of notes can solve this problem.
+          </li>
+          <li>
+            We want to make notes part of your git history so that you have the full context about the past. We will be building functionality to auto share your notes in your git repositories
+          </li>
+        </ol>
+
+        <h4 id="current-benefits-">Current features:</h4>
+        <p>Upnotes is just starting with few unique benefits like </p>
+        <ol >
+          <li>
+            Creating note using your git branch. This allows you to have consistent notes for each of your task.
+          </li>
+          <li>
+            Automatically created directories for organising your notes based on best practices.
+          </li>
+          <li>
+            Private notes that are version control using git
+          </li>
+          <li>
+            Github flavoured and industry standard markdown format with WYSIWYG and markdown support
+          </li>
+        </ol>
+
+        <h4  id="upcoming-features">Upcoming features:</h4>
+          <ol >
+            <li>
+              First class support for managing quick todos
+            </li>
+            <li>
+              Auto sync of local git repo with cloud providers (Github, google drive etc)
+            </li>
+            <li>
+              Share notes with team using git repo using markdown
+            </li>
+            <li>
+              First class support in markdown to create diagrams
+            </li>
+          </ol>
             <p>
-              <li> Automatically create notes based on your git branch</li>
-              <li> Simple and powerful markdown editor with markdown and wysiwyg and split mode support </li>
-              <li> Syntax highlight with support for most of the programming languages </li>
-              <li> Git managed notes with all the notes automatically organized and saved in github flavored markdown format. </li>
-              <li> Directories are organized based on day to day workflow for software engineer </li>
+              <span>Not ready to download it yet? We are going to add many more features and improvements...
+                Please join our </span>
+              <ReactGA.OutboundLink
+                  className="font-bold"
+                  style={{color: "#f16f3d"}}
+                eventLabel={`discord_chat`}
+                to="https://discord.gg/ATZTMeyWsW"
+            >
+              discord chat
+            </ReactGA.OutboundLink>
+              <span> for updates</span>
             </p>
 
         </div>
-      </div>
-
+      </article>
 
       <div id={'download'} className="max-w-screen-lg mx-auto pt-8">
         {tag == null ? <div><p>Getting latest version...</p></div> :
