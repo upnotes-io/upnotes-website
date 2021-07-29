@@ -4,7 +4,6 @@ import {faWindows, faApple, faLinux} from '@fortawesome/free-brands-svg-icons';
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import ReactGA from 'react-ga';
-import SubscribeForm from "../components/SubscribeForm";
 
 export default function Home() {
   let [tag, setTag] = useState(null);
