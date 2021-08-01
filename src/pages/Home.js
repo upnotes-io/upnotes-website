@@ -58,15 +58,16 @@ export default function Home() {
 
   const slideImages = [
     "/assets/onboarding.png",
-    "/assets/note-view.png",
+    "/assets/tasks.png",
+    "/assets/wiki.png",
   ];
 
   const properties = {
-    duration: 5000,
+    duration: 2000,
     autoplay: true,
     transitionDuration: 500,
     arrows: true,
-    infinite: false,
+    infinite: true,
     easing: "ease",
     indicators: true,
   };
@@ -74,12 +75,12 @@ export default function Home() {
   return (
     <div className="pb-16 pl-8 pr-8" style={{background: 'antiquewhite'}} >
       <div className="max-w-screen-lg mx-auto pt-24">
-        <div className="mx-auto" style={{height: '600px'}}>
+        <div className="mx-auto md:block hidden" style={{height: '600px'}}>
           <Slide {...properties}>
 
             {slideImages.map((each, index) => (
                 <div className="each-slide container flex justify-center">
-                  <img style={{ objectFit: 'cover', height: '600px'}} src={slideImages[index]} alt="slide images"/>
+                  <img style={{ objectFit: 'contain', height: '600px'}} src={slideImages[index]} alt="slide images"/>
                 </div>
             ))}
           </Slide>
