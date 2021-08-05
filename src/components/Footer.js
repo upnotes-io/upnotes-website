@@ -10,7 +10,7 @@ const Footer = function(){
             <p className="pr-4"><a href="mailto:admin@upnotes.io">Contact us</a></p>
             <p className="pr-4"><a href="https://www.reddit.com/r/upnotes/">Reddit</a></p>
             <p className="pr-4"><a href="https://discord.gg/ATZTMeyWsW">Discord</a></p>
-
+            <p className="pr-4"><a href="https://twitter.com/Upnotes1">Twitter</a></p>
         </footer>
     </div>
 }
