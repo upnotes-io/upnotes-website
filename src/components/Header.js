@@ -12,6 +12,12 @@ import Icon from "@material-ui/core/Icon";
 import ReactGA from 'react-ga';
 const headersData = [
   {
+    label: "Blog",
+    href: "https://blog.upnotes.io",
+    target: "_blank",
+    eventLabel: "blog",
+  },
+    {
     label: "Join Chat",
     href: "https://discord.gg/ATZTMeyWsW",
     target: "_blank",
