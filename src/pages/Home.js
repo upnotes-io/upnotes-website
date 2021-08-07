@@ -63,9 +63,9 @@ export default function Home() {
   ];
 
   const properties = {
-    duration: 2000,
+    duration: 3000,
     autoplay: true,
-    transitionDuration: 500,
+    transitionDuration: 700,
     arrows: true,
     infinite: true,
     easing: "ease",
@@ -75,17 +75,18 @@ export default function Home() {
   return (
     <div className="pb-16 pl-8 pr-8" style={{background: 'antiquewhite'}} >
       <div className="max-w-screen-lg mx-auto pt-24">
-        <div className="mx-auto md:block hidden" style={{height: '600px'}}>
+        <div className="mx-auto md:block hidden" style={{height: '500px'}}>
           <Slide {...properties}>
 
             {slideImages.map((each, index) => (
                 <div className="each-slide container flex justify-center">
-                  <img style={{ objectFit: 'contain', height: '600px'}} src={slideImages[index]} alt="slide images"/>
+                  <img style={{ objectFit: 'contain', height: '500px'}} src={slideImages[index]} alt="slide images"/>
                 </div>
             ))}
           </Slide>
         </div>
-        <h2 className="text-lg text-center pt-8" style={{color: 'black'}}>Automatically organize your software engineering notes.</h2>
+        <h2 className="text-lg text-center pt-8" style={{color: 'black'}}>A markdown first notes app for coders</h2>
+        <h4 className="text-sm text-center pt-2" style={{color: 'black'}}>Because your notes belong to you</h4>
         <div className="flex justify-center pt-8">
           <ReactGA.OutboundLink
               style={{backgroundColor: "#f16f3d"}}
@@ -141,10 +142,10 @@ export default function Home() {
                   style={{color: "#f16f3d"}}
                 eventLabel={`discord_chat`}
                 to="https://discord.gg/ATZTMeyWsW"
-            >
-              discord chat
-            </ReactGA.OutboundLink>
-              <span> for updates</span>
+              >
+              discord chat and tell us what you need in a notes app
+              </ReactGA.OutboundLink>
+
             </p>
 
         </div>
