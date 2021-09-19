@@ -59,6 +59,7 @@ export default function Home() {
   const slideImages = [
     "/assets/onboarding.png",
     "/assets/tasks.png",
+      "/assets/todo.png",
     "/assets/wiki.png",
   ];
 
@@ -112,6 +113,9 @@ export default function Home() {
             Automatically created directories for organising your notes based on best practices.
           </li>
           <li>
+            First class support for managing quick todos
+          </li>
+          <li>
             Private notes that are version control using git
           </li>
           <li>
@@ -121,9 +125,6 @@ export default function Home() {
 
         <h4  id="upcoming-features">Upcoming features:</h4>
           <ol >
-            <li>
-              First class support for managing quick todos
-            </li>
             <li>
               Auto sync of local git repo with cloud providers (Github, google drive etc)
             </li>
