@@ -78,8 +78,8 @@ const useStyles = makeStyles(() => ({
   },
   iconRoot: {
     textAlign: "center",
-    height: "36px",
-    width: "36px",
+    height: "48px",
+    width: "48px",
   },
   headerBrand: {
     display: "flex",
