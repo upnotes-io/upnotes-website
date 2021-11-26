@@ -1,8 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faWindows, faApple, faLinux} from '@fortawesome/free-brands-svg-icons';
-import { Slide } from "react-slideshow-image";
-import "react-slideshow-image/dist/styles.css";
 import ReactGA from 'react-ga';
 
 export default function Home() {
@@ -55,23 +53,6 @@ export default function Home() {
     }
     getTag();
   }, [tag]);
-
-  const slideImages = [
-    "/assets/onboarding.png",
-    "/assets/tasks.png",
-      "/assets/todo.png",
-    "/assets/wiki.png",
-  ];
-
-  const properties = {
-    duration: 3000,
-    autoplay: true,
-    transitionDuration: 700,
-    arrows: true,
-    infinite: true,
-    easing: "ease",
-    indicators: true,
-  };
 
   return (
     <div className="pb-16 pl-8 pr-8" style={{background: 'antiquewhite'}} >
