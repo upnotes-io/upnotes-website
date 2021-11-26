@@ -76,15 +76,9 @@ export default function Home() {
   return (
     <div className="pb-16 pl-8 pr-8" style={{background: 'antiquewhite'}} >
       <div className="max-w-screen-lg mx-auto pt-24">
-        <div className="mx-auto md:block hidden" style={{height: '500px'}}>
-          <Slide {...properties}>
-
-            {slideImages.map((each, index) => (
-                <div className="each-slide container flex justify-center">
-                  <img style={{ objectFit: 'contain', height: '500px'}} src={slideImages[index]} alt="slide images"/>
-                </div>
-            ))}
-          </Slide>
+        <div className="mx-auto w-full justify-center md:block hidden" style={{height: '560px', display: 'flex'}}>
+          <iframe width="87%" height="100%" src="https://www.youtube.com/embed/Jce6M9PlPyM?autoplay=1&mute=1&loop=1&vq=hd1080&playlist=Jce6M9PlPyM">
+          </iframe>
         </div>
         <h2 className="text-lg text-center pt-8" style={{color: 'black'}}>A markdown first notes app for coders</h2>
         <h4 className="text-sm text-center pt-2" style={{color: 'black'}}>Because your notes belong to you</h4>
