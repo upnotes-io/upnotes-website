@@ -58,7 +58,12 @@ export default function Home() {
     <div className="pb-16 pl-8 pr-8" style={{background: 'antiquewhite'}} >
       <div className="max-w-screen-lg mx-auto pt-24">
         <div className="mx-auto w-full justify-center md:block hidden" style={{height: '560px', display: 'flex'}}>
-          <iframe width="87%" height="100%" src="https://www.youtube.com/embed/Jce6M9PlPyM?autoplay=1&mute=1&loop=1&vq=hd1080&playlist=Jce6M9PlPyM">
+          <iframe 
+            width="87%" 
+            height="100%" 
+            title="Upnotes demo"
+            src="https://www.youtube.com/embed/Jce6M9PlPyM?autoplay=1&mute=1&loop=1&vq=hd1080&playlist=Jce6M9PlPyM"
+          >
           </iframe>
         </div>
         <h2 className="text-lg text-center pt-8" style={{color: 'black'}}>A markdown first notes app for coders</h2>
