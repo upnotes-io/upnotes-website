@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faWindows, faApple, faLinux} from '@fortawesome/free-brands-svg-icons';
 import ReactGA from 'react-ga';
+import FeatureTemplate from 'components/FeatureTemplate';
 
 export default function Home() {
   let [tag, setTag] = useState(null);
@@ -80,6 +81,7 @@ export default function Home() {
           </ReactGA.OutboundLink>
         </div>
       </div>
+      <FeatureTemplate />
       <article className="pt-8 max-w-screen-lg text-lg mx-auto prose lg:prose-xl">
         <div>
 
