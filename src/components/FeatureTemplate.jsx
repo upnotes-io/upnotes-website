@@ -1,14 +1,20 @@
 import React from 'react';
-import upnotesImg from '../../public/assets/upnotes.png';
+import ImageWithLaptopFrame from './ImageWithLaptopFrame';
+// import upnotesImg from '';
 
-const FeatureTemplate = function () {
-    return <div>
-        <h2> Automatically organized notebooks for software engineers just focus on writing notes.</h2>
-        <p>We organize your notes based on your git reposities. You just need to configure it once.</p>
-        <div>
-            <img src={upnotesImg} alt="feature" />
+const FeatureTemplate = function (props) {
+    const { title, description, backgroundColor, list, imageSrc, flexDirection = 'flex-row'  } = props;
+    return <div className="flex justify-center items-center p-10" style={{ background: backgroundColor }}>
+        <div className={`max-w-screen-xl pt-16 pb-16 flex flex-col  lg:${flexDirection} items-start`} >
+            <div className="flex flex-col justify-center items-center py-10 lg:w-4/6 lg:px-10">
+                <h2 className="text-4xl tracking-wider text-center ">{title}</h2>
+                <p className="text-xl tracking-wide text-center pt-10 leading-8">{description}</p>
+            </div>
+            <div className="pt-5">
+                <ImageWithLaptopFrame imageUrl={imageSrc} />
+            </div>
         </div>
-    </div>
+    </div>;
 }
 
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const mailChimpHtml = "<div style='background: #f9b296;' id=\"mc_embed_signup\">\n" +
+const mailChimpHtml = "<div style='background: rgb(249, 178, 50);' id=\"mc_embed_signup\">\n" +
     "<form action=\"https://gmail.us6.list-manage.com/subscribe/post?u=2e96ecf020cbf0911c36f7634&amp;id=98e12c8451\" method=\"post\" id=\"mc-embedded-subscribe-form\" name=\"mc-embedded-subscribe-form\" class=\"validate\" target=\"_blank\" novalidate>\n" +
     "    <div id=\"mc_embed_signup_scroll\">\n" +
     "\t<h2>Subscribe for updates</h2>\n" +
