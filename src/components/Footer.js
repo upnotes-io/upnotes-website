@@ -2,7 +2,7 @@ import React from 'react';
 import SubscribeForm from "./SubscribeForm";
 
 const Footer = function(){
-    return <div className="pb-16 flex flex-col items-center " style={{background: 'rgb(249, 178, 50)'}}>
+    return <div className="pb-16 flex flex-col items-center " style={{background: 'antiquewhite'}}>
         <div className="max-w-screen-lg w-full">
             <SubscribeForm/>
         </div>

@@ -87,19 +87,23 @@ export default function Home() {
       <FeatureTemplate
         title="Auto organized notes"
         description="You just need to configure your workplace directory. Once you done that. We will create 3 notebooks ( git tasks, tasks and wiki ) for each repository."
-        list={['git tasks - Magically creates note for your current branch.', 'tasks - Any other task related notes.', ' wiki - Your wiki, all the common scripts, commands and sql queries etc.']}
-        backgroundColor="rgb(218 214 251)"
+        backgroundColor="#fff"
         imageSrc={`${process.env.PUBLIC_URL}/assets/current-branch-screen.png`}
       />
       <FeatureTemplate
         title="Markdown first and code support."
-        description="All your notes are saved in markdown format."
-        list={['git tasks - Magically creates note for your current branch.', 'tasks - Any other task related notes.', ' wiki - Your wiki, all the common scripts, commands and sql queries etc.']}
-        backgroundColor="rgb(218 214 100)"
+        description="All your notes are saved in markdown format.All your notes are saved in markdown format.All your notes are saved in markdown format.All your notes are saved in markdown format.All your notes are saved in markdown format."
+        backgroundColor="antiquewhite"
         flexDirection="flex-row-reverse"
         imageSrc={`${process.env.PUBLIC_URL}/assets/code-example.png`}
       />
-      <div className=" p-20" style={{ background: 'rgb(249, 178, 50)' }}>
+      <FeatureTemplate
+        title="Markdown first and code support."
+        description="All your notes are saved in markdown format.All your notes are saved in markdown format.All your notes are saved in markdown format.All your notes are saved in markdown format."
+        backgroundColor="#fff"
+        imageSrc={`${process.env.PUBLIC_URL}/assets/code-example.png`}
+      />
+      <div className=" p-20" style={{ background: 'antiquewhite' }}>
         <div id={'download'} className="max-w-screen-lg mx-auto pt-8">
           {tag == null ? <div><p>Getting latest version...</p></div> :
             <div className="flex justify-between text-xl">
@@ -110,7 +114,7 @@ export default function Home() {
           }
         </div>
 
-        <div className="flex justify-center max-w-screen-lg mx-auto pt-12">
+        <div className="flex justify-center max-w-screen-lg mx-auto pt-12 pl-12">
           <a rel="noreferrer" href='https://www.remote.tools/upnotes/product?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-featured' target='_blank'><img src='https://remote-tools-products.s3-us-west-2.amazonaws.com/rt_badge/2/Light.svg' alt='Upnotes' styles='width: 250px; height: 54px;' width='250px' height='54px' /></a>
         </div>
       </div>  
