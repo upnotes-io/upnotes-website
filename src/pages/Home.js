@@ -91,15 +91,15 @@ export default function Home() {
         imageSrc={`${process.env.PUBLIC_URL}/assets/current-branch-screen.png`}
       />
       <FeatureTemplate
-        title="Markdown first and code support."
-        description="All your notes are saved in markdown format.All your notes are saved in markdown format.All your notes are saved in markdown format.All your notes are saved in markdown format.All your notes are saved in markdown format."
+        title="Hassle free ui and todo support"
+        description="Simple and state forword ui. We have just notebooks at first place then notes and then Editor. No add buttons just write note name to text box and enter to add new note."
         backgroundColor="antiquewhite"
         flexDirection="flex-row-reverse"
-        imageSrc={`${process.env.PUBLIC_URL}/assets/code-example.png`}
+        imageSrc={`${process.env.PUBLIC_URL}/assets/todo.png`}
       />
       <FeatureTemplate
-        title="Markdown first and code support."
-        description="All your notes are saved in markdown format.All your notes are saved in markdown format.All your notes are saved in markdown format.All your notes are saved in markdown format."
+        title="Markdown first, Code support and powered with git."
+        description="All your notes are saved in markdown format. We create a notes dir in your selected location and save every note in markdown format. We init git to notes directory and do commits periodically to make sure you can go back in history and do not lose anything"
         backgroundColor="#fff"
         imageSrc={`${process.env.PUBLIC_URL}/assets/code-example.png`}
       />
