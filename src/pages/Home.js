@@ -1,7 +1,8 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faWindows, faApple, faLinux} from '@fortawesome/free-brands-svg-icons';
+import { faWindows, faApple, faLinux } from '@fortawesome/free-brands-svg-icons';
 import ReactGA from 'react-ga';
+import FeatureTemplate from 'components/FeatureTemplate';
 
 export default function Home() {
   let [tag, setTag] = useState(null);
@@ -55,96 +56,68 @@ export default function Home() {
   }, [tag]);
 
   return (
-    <div className="pb-16 pl-8 pr-8" style={{background: 'antiquewhite'}} >
-      <div className="max-w-screen-lg mx-auto pt-24">
-        <div className="mx-auto w-full justify-center md:block hidden" style={{height: '560px', display: 'flex'}}>
-          <iframe 
-            width="87%" 
-            height="100%" 
-            title="Upnotes demo"
-            src="https://www.youtube.com/embed/Jce6M9PlPyM?autoplay=1&mute=1&loop=1&vq=hd1080&playlist=Jce6M9PlPyM"
-          >
-          </iframe>
-        </div>
-        <h2 className="text-lg text-center pt-8" style={{color: 'black'}}>A markdown first notes app for coders</h2>
-        <h4 className="text-sm text-center pt-2" style={{color: 'black'}}>Because your notes belong to you</h4>
-        <div className="flex justify-center pt-8">
-          <ReactGA.OutboundLink
-              style={{backgroundColor: "#f16f3d"}}
-              className="hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 rounded"
-              eventLabel={`download-1-${os}`}
-              to={downloadHref}
-          >
-            <FontAwesomeIcon icon={getOSIcon()} />
-            <span> Download </span>
-          </ReactGA.OutboundLink>
+    <div>
+      <div className="flex justify-center items-center" style={{ background: 'antiquewhite' }}>
+        <div className="max-w-screen-lg pt-24 pb-16"  >
+          <div className=" mx-auto ">
+            <h2 className="text-5xl tracking-wider text-center pt-14">Notes app for software developers</h2>
+            <p className="text-xl tracking-wide text-center pt-6 leading-8">You just focus on writing notes. We are going to organize all your notebooks based on your repositories and all the notes are powered with git.</p>
+            <div className="flex justify-center pt-8">
+              <ReactGA.OutboundLink
+                style={{ backgroundColor: "#f16f3d" }}
+                className="hover:bg-orange-400 text-white text-xl font-bold py-3 px-20 border-b-4 rounded"
+                eventLabel={`download-1-${os}`}
+                to={downloadHref}
+              >
+                <FontAwesomeIcon icon={getOSIcon()} />
+                <span> Download for free </span>
+              </ReactGA.OutboundLink>
+            </div>
+          </div>
+          <div className="mx-auto w-full justify-center md:block hidden pt-10" style={{ height: '650px', display: 'flex' }}>
+            <iframe
+              width="95%"
+              title="Upnotes demo"
+              src="https://www.youtube.com/embed/Jce6M9PlPyM?&mute=1&vq=hd1080"
+            >
+            </iframe>
+          </div>
         </div>
       </div>
-      <article className="pt-8 max-w-screen-lg text-lg mx-auto prose lg:prose-xl">
-        <div>
-
-        <h4 id="current-benefits-">Current features:</h4>
-        <p>Upnotes is just starting with few unique benefits like </p>
-        <ol >
-          <li>
-            Creating note using your git branch. This allows you to have consistent notes for each of your task.
-          </li>
-          <li>
-            Automatically created directories for organising your notes based on best practices.
-          </li>
-          <li>
-            First class support for managing quick todos
-          </li>
-          <li>
-            Private notes that are version control using git
-          </li>
-          <li>
-            Github flavoured and industry standard markdown format with WYSIWYG and markdown support
-          </li>
-        </ol>
-
-        <h4  id="upcoming-features">Upcoming features:</h4>
-          <ol >
-            <li>
-              Auto sync of local git repo with cloud providers (Github, google drive etc)
-            </li>
-            <li>
-              Share notes with team using git repo using markdown
-            </li>
-            <li>
-              First class support in markdown to create diagrams
-            </li>
-          </ol>
-            <p>
-              <span>Not ready to download it yet? We are going to add many more features and improvements...
-                Please join our </span>
-              <ReactGA.OutboundLink
-                  className="font-bold"
-                  style={{color: "#f16f3d"}}
-                eventLabel={`discord_chat`}
-                to="https://discord.gg/ATZTMeyWsW"
-              >
-              discord chat and tell us what you need in a notes app
-              </ReactGA.OutboundLink>
-
-            </p>
-
-        </div>
-      </article>
-
-      <div id={'download'} className="max-w-screen-lg mx-auto pt-8">
-        {tag == null ? <div><p>Getting latest version...</p></div> :
+      <FeatureTemplate
+        title="Auto organized notes"
+        description="You just need to configure your workplace directory. Once you done that. We will create 3 notebooks ( git tasks, tasks and wiki ) for each repository."
+        backgroundColor="#fff"
+        imageSrc={`${process.env.PUBLIC_URL}/assets/current-branch-screen.png`}
+      />
+      <FeatureTemplate
+        title="Hassle free ui and todo support"
+        description="Simple and state forword ui. We have just notebooks at first place then notes and then Editor. No add buttons just write note name to text box and enter to add new note."
+        backgroundColor="antiquewhite"
+        flexDirection="flex-row-reverse"
+        imageSrc={`${process.env.PUBLIC_URL}/assets/todo.png`}
+      />
+      <FeatureTemplate
+        title="Markdown first, Code support and powered with git."
+        description="All your notes are saved in markdown format. We create a notes dir in your selected location and save every note in markdown format. We init git to notes directory and do commits periodically to make sure you can go back in history and do not lose anything"
+        backgroundColor="#fff"
+        imageSrc={`${process.env.PUBLIC_URL}/assets/code-example.png`}
+      />
+      <div className=" p-20" style={{ background: 'antiquewhite' }}>
+        <div id={'download'} className="max-w-screen-lg mx-auto pt-8">
+          {tag == null ? <div><p>Getting latest version...</p></div> :
             <div className="flex justify-between text-xl">
               <div><ReactGA.OutboundLink eventLabel="download-2-windows" to={getWindowsHref(tag)}><FontAwesomeIcon icon={faWindows} /> <span>Windows</span></ReactGA.OutboundLink></div>
               <div><ReactGA.OutboundLink eventLabel="download-2-linux" to={getLinuxHref(tag)}><FontAwesomeIcon icon={faLinux} /> <span>Linux</span></ReactGA.OutboundLink></div>
               <div><ReactGA.OutboundLink eventLabel="download-2-mac" to={getMacHref(tag)}><FontAwesomeIcon icon={faApple} /> <span>Mac</span></ReactGA.OutboundLink></div>
             </div>
-        }
-      </div>
+          }
+        </div>
 
-      <div className="flex justify-center max-w-screen-lg mx-auto pt-12">
-        <a rel="noreferrer" href='https://www.remote.tools/upnotes/product?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-featured' target='_blank'><img src='https://remote-tools-products.s3-us-west-2.amazonaws.com/rt_badge/2/Light.svg' alt='Upnotes' styles='width: 250px; height: 54px;' width='250px' height='54px'/></a>
-      </div>
+        <div className="flex justify-center max-w-screen-lg mx-auto pt-12 pl-12">
+          <a rel="noreferrer" href='https://www.remote.tools/upnotes/product?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-featured' target='_blank'><img src='https://remote-tools-products.s3-us-west-2.amazonaws.com/rt_badge/2/Light.svg' alt='Upnotes' styles='width: 250px; height: 54px;' width='250px' height='54px' /></a>
+        </div>
+      </div>  
     </div>
   )
 }
