@@ -74,14 +74,6 @@ export default function Home() {
               </ReactGA.OutboundLink>
             </div>
           </div>
-          <div className="mx-auto w-full justify-center md:block hidden pt-10" style={{ height: '650px', display: 'flex' }}>
-            <iframe
-              width="95%"
-              title="Upnotes demo"
-              src="https://www.youtube.com/embed/Jce6M9PlPyM?&mute=1&vq=hd1080"
-            >
-            </iframe>
-          </div>
         </div>
       </div>
       <FeatureTemplate
@@ -103,13 +95,23 @@ export default function Home() {
         backgroundColor="#fff"
         imageSrc={`${process.env.PUBLIC_URL}/assets/code-example.png`}
       />
-      <div className=" p-20" style={{ background: 'antiquewhite' }}>
+      <div className="flex justify-center items-center" style={{ background: 'antiquewhite' }}>
+        <div className="max-w-screen-lg pt-24 pb-16" >
+          <iframe
+            width="95%"
+            title="Upnotes demo"
+            src="https://www.youtube.com/embed/Jce6M9PlPyM?&mute=1&vq=hd1080"
+          >
+          </iframe>
+        </div>
+      </div>
+      <div className="p-20 hidden md:block" style={{ background: 'antiquewhite', color: '#50abd7' }}>
         <div id={'download'} className="max-w-screen-lg mx-auto pt-8">
           {tag == null ? <div><p>Getting latest version...</p></div> :
             <div className="flex justify-between text-xl">
-              <div><ReactGA.OutboundLink eventLabel="download-2-windows" to={getWindowsHref(tag)}><FontAwesomeIcon icon={faWindows} /> <span>Windows</span></ReactGA.OutboundLink></div>
-              <div><ReactGA.OutboundLink eventLabel="download-2-linux" to={getLinuxHref(tag)}><FontAwesomeIcon icon={faLinux} /> <span>Linux</span></ReactGA.OutboundLink></div>
-              <div><ReactGA.OutboundLink eventLabel="download-2-mac" to={getMacHref(tag)}><FontAwesomeIcon icon={faApple} /> <span>Mac</span></ReactGA.OutboundLink></div>
+              <div><ReactGA.OutboundLink eventLabel="download-2-windows" to={getWindowsHref(tag)}><FontAwesomeIcon icon={faWindows} /> <span>Download for Windows</span></ReactGA.OutboundLink></div>
+              <div><ReactGA.OutboundLink eventLabel="download-2-linux" to={getLinuxHref(tag)}><FontAwesomeIcon icon={faLinux} /> <span>Download for Linux</span></ReactGA.OutboundLink></div>
+              <div><ReactGA.OutboundLink eventLabel="download-2-mac" to={getMacHref(tag)}><FontAwesomeIcon icon={faApple} /> <span>Download for Mac</span></ReactGA.OutboundLink></div>
             </div>
           }
         </div>
@@ -117,7 +119,7 @@ export default function Home() {
         <div className="flex justify-center max-w-screen-lg mx-auto pt-12 pl-12">
           <a rel="noreferrer" href='https://www.remote.tools/upnotes/product?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-featured' target='_blank'><img src='https://remote-tools-products.s3-us-west-2.amazonaws.com/rt_badge/2/Light.svg' alt='Upnotes' styles='width: 250px; height: 54px;' width='250px' height='54px' /></a>
         </div>
-      </div>  
+      </div>
     </div>
   )
 }
