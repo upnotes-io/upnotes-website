@@ -1,11 +1,29 @@
+// @ts-nocheck
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWindows, faApple, faLinux } from '@fortawesome/free-brands-svg-icons';
 import ReactGA from 'react-ga';
 import FeatureTemplate from 'components/FeatureTemplate';
+import { Modal, Box, Typography, TextField, Button } from '@material-ui/core';
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '49%',
+  transform: 'translate(-50%, -50%)',
+  width: '96%',
+  backgroundColor: '#fff',
+  border: '1px solid black',
+  boxShadow: 24,
+};
+
 
 export default function Home() {
   let [tag, setTag] = useState(null);
+
+  const [openModel, setOpenModel] = React.useState(false);
+  const handleOpen = () => setOpenModel(true);
+  const handleClose = () => setOpenModel(false);
 
   let [downloadHref, setDownloadHref] = useState("#download");
   let [os, setOs] = useState("unknown");
@@ -19,7 +37,7 @@ export default function Home() {
     }
   }
   function getWindowsHref(tag) {
-    return `https://github.com/upnotes-io/upnotes-website/releases/download/v${tag}/Upnotes-${tag}.exe`;
+    return `https://github.com/upnotes-io/upnotes-website/releases/download/v${tag}/Upnotes-Setup-${tag}.exe`;
   }
 
   function getLinuxHref(tag) {
@@ -62,16 +80,29 @@ export default function Home() {
           <div className=" mx-auto ">
             <h2 className="text-5xl tracking-wider text-center pt-14">Notes app for software developers</h2>
             <p className="text-xl tracking-wide text-center pt-6 leading-8">You just focus on writing notes. We are going to organize all your notebooks based on your repositories and all the notes are powered with git.</p>
-            <div className="flex justify-center pt-8">
-              <ReactGA.OutboundLink
-                style={{ backgroundColor: "#f16f3d" }}
-                className="hover:bg-orange-400 text-white text-xl font-bold py-3 px-20 border-b-4 rounded"
-                eventLabel={`download-1-${os}`}
-                to={downloadHref}
-              >
-                <FontAwesomeIcon icon={getOSIcon()} />
-                <span> Download for free </span>
-              </ReactGA.OutboundLink>
+            <div className="hidden md:block">
+              <div className="flex justify-center pt-8">
+                <ReactGA.OutboundLink
+                  style={{ backgroundColor: "#f16f3d" }}
+                  className="hover:bg-orange-400 text-white text-xl font-bold py-3 px-20 border-b-4 rounded"
+                  eventLabel={`download-1-${os}`}
+                  to={downloadHref}
+                >
+                  <FontAwesomeIcon icon={getOSIcon()} />
+                  <span> Download for free </span>
+                </ReactGA.OutboundLink>
+              </div>
+            </div>
+            <div className="sm:hidden ">
+              <div className="flex justify-center pt-8 m-2">
+                <button
+                  style={{ backgroundColor: "#f16f3d" }}
+                  onClick={handleOpen}
+                  className="hover:bg-orange-400 text-white text-lg font-bold py-3 px-10 rounded"
+                >
+                  Get Dowanload link on Mail
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -107,18 +138,41 @@ export default function Home() {
       </div>
       <div className="p-20 hidden md:block" style={{ background: 'antiquewhite', color: '#50abd7' }}>
         <div id={'download'} className="max-w-screen-lg mx-auto pt-8">
-          {tag == null ? <div><p>Getting latest version...</p></div> :
+          {tag == null ? <div><p>Getting latest version...</p></div> : <div>
+
             <div className="flex justify-between text-xl">
-              <div><ReactGA.OutboundLink eventLabel="download-2-windows" to={getWindowsHref(tag)}><FontAwesomeIcon icon={faWindows} /> <span>Download for Windows</span></ReactGA.OutboundLink></div>
-              <div><ReactGA.OutboundLink eventLabel="download-2-linux" to={getLinuxHref(tag)}><FontAwesomeIcon icon={faLinux} /> <span>Download for Linux</span></ReactGA.OutboundLink></div>
-              <div><ReactGA.OutboundLink eventLabel="download-2-mac" to={getMacHref(tag)}><FontAwesomeIcon icon={faApple} /> <span>Download for Mac</span></ReactGA.OutboundLink></div>
+              <div><ReactGA.OutboundLink eventLabel="download-2-windows" to={getWindowsHref(tag)}><FontAwesomeIcon icon={faWindows} /> <span>Download Windows</span></ReactGA.OutboundLink></div>
+              <div><ReactGA.OutboundLink eventLabel="download-2-linux" to={getLinuxHref(tag)}><FontAwesomeIcon icon={faLinux} /> <span>Download Linux</span></ReactGA.OutboundLink></div>
+              <div><ReactGA.OutboundLink eventLabel="download-2-mac" to={getMacHref(tag)}><FontAwesomeIcon icon={faApple} /> <span>Download Mac</span></ReactGA.OutboundLink></div>
+              <div><ReactGA.OutboundLink eventLabel="more-download-options" target='_blank' to="https://github.com/upnotes-io/upnotes-website/releases"> <span>More download options</span></ReactGA.OutboundLink></div>
             </div>
+          </div>
           }
         </div>
 
         <div className="flex justify-center max-w-screen-lg mx-auto pt-12 pl-12">
           <a rel="noreferrer" href='https://www.remote.tools/upnotes/product?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-featured' target='_blank'><img src='https://remote-tools-products.s3-us-west-2.amazonaws.com/rt_badge/2/Light.svg' alt='Upnotes' styles='width: 250px; height: 54px;' width='250px' height='54px' /></a>
         </div>
+      </div>
+      <div>
+        <Modal
+          open={openModel}
+          onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <Box style={style} className='p-2'>
+            <form onSubmit={(e)=>{ e.preventDefault(); alert("hello ")}}>
+              <TextField
+                fullWidth
+                variant="filled"
+                label="Email"
+                type="email"
+              />
+              <Button style={{marginTop: '2rem'}} type="submit" variant='contained'> Submit </Button>
+            </form>
+          </Box>
+        </Modal>
       </div>
     </div>
   )
