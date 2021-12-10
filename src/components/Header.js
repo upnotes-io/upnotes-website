@@ -55,6 +55,7 @@ const useStyles = makeStyles(() => ({
     fontWeight: 600,
     color: "black",
     textAlign: "left",
+    paddingLeft: 6,
   },
   menuButton: {
     fontFamily: "Open Sans, sans-serif",
