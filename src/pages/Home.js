@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWindows, faApple, faLinux } from '@fortawesome/free-brands-svg-icons';
 import ReactGA from 'react-ga';
 import FeatureTemplate from 'components/FeatureTemplate';
-import { Modal, Box, Typography, TextField, Button } from '@material-ui/core';
+import { Modal, Box} from '@material-ui/core';
 import SubscribeForm from "../components/SubscribeForm";
 
 const style = {
