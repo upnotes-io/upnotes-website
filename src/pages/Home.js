@@ -5,6 +5,7 @@ import { faWindows, faApple, faLinux } from '@fortawesome/free-brands-svg-icons'
 import ReactGA from 'react-ga';
 import FeatureTemplate from 'components/FeatureTemplate';
 import { Modal, Box, Typography, TextField, Button } from '@material-ui/core';
+import SubscribeForm from "../components/SubscribeForm";
 
 const style = {
   position: 'absolute',
@@ -162,15 +163,7 @@ export default function Home() {
           aria-describedby="modal-modal-description"
         >
           <Box style={style} className='p-2'>
-            <form onSubmit={(e)=>{ e.preventDefault(); alert("hello ")}}>
-              <TextField
-                fullWidth
-                variant="filled"
-                label="Email"
-                type="email"
-              />
-              <Button style={{marginTop: '2rem'}} type="submit" variant='contained'> Submit </Button>
-            </form>
+            <SubscribeForm title="Your are on a mobile device. Enter your email to get the download link for your PC"/>
           </Box>
         </Modal>
       </div>
