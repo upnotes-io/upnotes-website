@@ -76,11 +76,11 @@ export default function Home() {
 
   return (
     <div>
-      <div className="flex justify-center items-center" style={{ background: 'antiquewhite' }}>
+      <div className="flex justify-center items-center" style={{ background: '#fff' }}>
         <div className="max-w-screen-lg pt-24 pb-16"  >
           <div className=" mx-auto ">
             <h2 className="text-5xl tracking-wider text-center pt-14">A open standard notes app for software developers</h2>
-            <p className="text-xl tracking-wide text-center pt-6 leading-8">You just focus on writing notes. We are going to organize all your notebooks based on your repositories and all the notes are powered with git.</p>
+            <p className="text-xl tracking-wide text-center pt-6 leading-8">Markdown first, Powered with VS Code and Git.</p>
             <div className="hidden md:block">
               <div className="flex justify-center pt-8">
                 <ReactGA.OutboundLink
@@ -109,34 +109,32 @@ export default function Home() {
         </div>
       </div>
       <FeatureTemplate
-        title="Auto organized notes"
-        description="You just need to configure your workplace directory. Once you done that. We will create 3 notebooks ( git tasks, tasks and wiki ) for each repository."
+        title="Powered with VS Code editor"
+        description="We believe simple vs code editor make more sense for developers to take note but the good part is you can toggle to markdown editor as well if needed."
+        backgroundColor="antiquewhite"
+        flexDirection="flex-row-reverse"
+        imageSrc={`${process.env.PUBLIC_URL}/assets/vscode.png`}
+      />
+      <FeatureTemplate
+        title="Powered with git."
+        description="All your notes are saved in markdown format. We init git to notes directory and do commits periodically to make sure you can go back in history and do not lose anything"
         backgroundColor="#fff"
+        list={['You just write your notes and we do commit your notes time to time', 'No more worrries of losing notes', 'Sync your notes to github or gitlab because your notes only belongs you.']}
+        imageSrc={`${process.env.PUBLIC_URL}/assets/github-sync.png`}
+      />
+      <FeatureTemplate
+        title="Auto organized notes"
+        description="Configure your workplace. Upnotes create 3 notebooks ( git tasks, tasks and wiki ) for each repository and git task creates note for new branch automatically."
+        backgroundColor="antiquewhite"
+        flexDirection="flex-row-reverse"
         imageSrc={`${process.env.PUBLIC_URL}/assets/current-branch-screen.png`}
       />
       <FeatureTemplate
-        title="Hassle free ui and todo support"
-        description="Simple and state forword ui. We have just notebooks at first place then notes and then Editor. No add buttons just write note name to text box and enter to add new note."
-        backgroundColor="antiquewhite"
-        flexDirection="flex-row-reverse"
-        imageSrc={`${process.env.PUBLIC_URL}/assets/todo.png`}
-      />
-      <FeatureTemplate
-        title="Markdown first, Code support and powered with git."
-        description="All your notes are saved in markdown format. We create a notes dir in your selected location and save every note in markdown format. We init git to notes directory and do commits periodically to make sure you can go back in history and do not lose anything"
+        title="Focus mode and todo support"
+        description="To just focus on writing notes switch to focus mode and add todos"
         backgroundColor="#fff"
-        imageSrc={`${process.env.PUBLIC_URL}/assets/code-example.png`}
+        imageSrc={`${process.env.PUBLIC_URL}/assets/todo-fullscreen.png`}
       />
-      <div className="flex justify-center items-center" style={{ background: 'antiquewhite' }}>
-        <div className="max-w-screen-lg pt-24 pb-16" >
-          <iframe
-            width="95%"
-            title="Upnotes demo"
-            src="https://www.youtube.com/embed/Jce6M9PlPyM?&mute=1&vq=hd1080"
-          >
-          </iframe>
-        </div>
-      </div>
       <div className="p-20 hidden md:block" style={{ background: 'antiquewhite', color: '#50abd7' }}>
         <div id={'download'} className="max-w-screen-lg mx-auto pt-8">
           {tag == null ? <div><p>Getting latest version...</p></div> : <div>
