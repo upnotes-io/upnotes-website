@@ -79,7 +79,7 @@ export default function Home() {
       <div className="flex justify-center items-center" style={{ background: 'antiquewhite' }}>
         <div className="max-w-screen-lg pt-24 pb-16"  >
           <div className=" mx-auto ">
-            <h2 className="text-5xl tracking-wider text-center pt-14">Notes app for software developers</h2>
+            <h2 className="text-5xl tracking-wider text-center pt-14">A open standard notes app for software developers</h2>
             <p className="text-xl tracking-wide text-center pt-6 leading-8">You just focus on writing notes. We are going to organize all your notebooks based on your repositories and all the notes are powered with git.</p>
             <div className="hidden md:block">
               <div className="flex justify-center pt-8">
