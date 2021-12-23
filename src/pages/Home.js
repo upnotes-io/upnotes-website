@@ -101,7 +101,7 @@ export default function Home() {
                   onClick={handleOpen}
                   className="hover:bg-orange-400 text-white text-lg font-bold py-3 px-10 rounded"
                 >
-                  Get Dowanload link on Mail
+                  Get Download link on Mail
                 </button>
               </div>
             </div>
