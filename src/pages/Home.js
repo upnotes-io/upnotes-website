@@ -110,16 +110,16 @@ export default function Home() {
       </div>
       <FeatureTemplate
         title="Powered with VS Code editor"
-        description="We believe simple vs code editor make more sense for developers to take note but the good part is you can toggle to markdown editor as well if needed."
+        description="We believe simple vs code editor makes more sense for developers to take note but the good part is you can toggle to markdown editor as well if needed."
         backgroundColor="antiquewhite"
         flexDirection="flex-row-reverse"
         imageSrc={`${process.env.PUBLIC_URL}/assets/vscode.png`}
       />
       <FeatureTemplate
         title="Powered with git."
-        description="All your notes are saved in markdown format. We init git to notes directory and do commits periodically to make sure you can go back in history and do not lose anything"
+        description="All your notes are saved in markdown format. We init git to notes directory and do commit periodically to make sure you can go back in history and do not lose anything"
         backgroundColor="#fff"
-        list={['You just write your notes and we do commit your notes time to time', 'No more worrries of losing notes', 'Sync your notes to github or gitlab because your notes only belongs you.']}
+        list={['You just write your notes and we do commit your notes from time to time', 'No more worrries of losing notes', 'Sync your notes to github or gitlab because your notes only belongs you.']}
         imageSrc={`${process.env.PUBLIC_URL}/assets/github-sync.png`}
       />
       <FeatureTemplate
