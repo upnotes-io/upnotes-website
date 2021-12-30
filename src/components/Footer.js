@@ -11,6 +11,8 @@ const Footer = function(){
             <p className="pr-4"><a href="https://www.reddit.com/r/upnotes/">Reddit</a></p>
             <p className="pr-4"><a href="https://discord.gg/ATZTMeyWsW">Discord</a></p>
             <p className="pr-4"><a href="https://twitter.com/Upnotes1">Twitter</a></p>
+            <p className="pr-4"><a href="https://blog.upnotes.io/">Blog</a></p>
+            <p className="pr-4"><a href="https://github.com/upnotes-io/upnotes-website/releases">All releases</a></p>
         </footer>
     </div>
 }

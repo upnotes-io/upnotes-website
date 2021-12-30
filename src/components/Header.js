@@ -11,12 +11,6 @@ import React, { useState, useEffect } from "react";
 import Icon from "@material-ui/core/Icon";
 import ReactGA from 'react-ga';
 const headersData = [
-    {
-    label: "Join Chat",
-    href: "https://discord.gg/ATZTMeyWsW",
-    target: "_blank",
-    eventLabel: "join_chat",
-  },
   {
     label: "Report Issue",
     href: "https://github.com/upnotes-io/upnotes-website/issues/new",
