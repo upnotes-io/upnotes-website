@@ -78,9 +78,9 @@ export default function Home() {
     <div>
       <div className="flex justify-center items-center" style={{ background: '#fff' }}>
         <div className="max-w-screen-lg pt-24 pb-16"  >
-          <div className=" mx-auto ">
-            <h2 className="text-5xl tracking-wider text-center pt-14">A open standard notes app for software developers</h2>
-            <p className="text-xl tracking-wide text-center pt-6 leading-8">Markdown first, Powered with VS Code and Git.</p>
+          <div className="mx-1">
+            <h2 className="text-3xl sm:text-5xl tracking-wider text-center pt-14">A open standard notes app for software developers</h2>
+            <p className="text-md sm:text-lg tracking-wide text-center pt-6 leading-8">Markdown first, Powered with VS Code and Git.</p>
             <div className="hidden md:block">
               <div className="flex justify-center pt-8">
                 <ReactGA.OutboundLink
@@ -99,7 +99,7 @@ export default function Home() {
                 <button
                   style={{ backgroundColor: "#f16f3d" }}
                   onClick={handleOpen}
-                  className="hover:bg-orange-400 text-white text-lg font-bold py-3 px-10 rounded"
+                  className="hover:bg-orange-400 text-white text-md font-bold py-3 px-10 rounded"
                 >
                   Get Download link on Mail
                 </button>
@@ -117,7 +117,7 @@ export default function Home() {
       />
       <FeatureTemplate
         title="Powered with git."
-        description="All your notes are saved in markdown format. We init git to notes directory and do commits periodically to make sure you can go back in history and do not lose anything"
+        description="All your notes are saved in markdown format. We init git to notes directory and do commit periodically to make sure you can go back in history and do not lose anything"
         backgroundColor="#fff"
         list={['You just write your notes and we do commit your notes time to time', 'No more worries of losing notes', 'Sync your notes to github or gitlab because your notes only belongs you.']}
         imageSrc={`${process.env.PUBLIC_URL}/assets/github-sync.png`}
