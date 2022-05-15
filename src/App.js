@@ -8,7 +8,11 @@ function App() {
   React.useEffect(()=>{
     console.log("env:" + process.env.NODE_ENV);
     if (process.env.NODE_ENV !== 'development') {
-      ReactGA.initialize('UA-196765342-1', {debug: true});
+      const trackers = [
+          { trackingId: 'UA-196765342-1', debug: true },
+          { trackingId: 'AW-834081170', debug: true}
+      ]
+      ReactGA.initialize(trackers);
       ReactGA.pageview(window.location.pathname + window.location.search);
     }
   })
