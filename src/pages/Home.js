@@ -93,6 +93,9 @@ export default function Home() {
                   <span> Download for free </span>
                 </ReactGA.OutboundLink>
               </div>
+              <div className="flex justify-center pt-8">
+                <p>Compatible with <a className="font-bold" href="https://gitjournal.io/">GitJournal</a> for iOS and android support.</p>
+              </div>
             </div>
             <div className="sm:hidden ">
               <div className="flex justify-center pt-8 m-2">
@@ -134,6 +137,12 @@ export default function Home() {
         description="To just focus on writing notes switch to focus mode and add todos"
         backgroundColor="#fff"
         imageSrc={`${process.env.PUBLIC_URL}/assets/todo-fullscreen.png`}
+      />
+      <FeatureTemplate
+          title="GitJournal support for iOS and android"
+          description="For quick access to your notes, we support GitJournal for iOS and android. You can use git sync to sync across mobile and your desktop."
+          backgroundColor="antiquewhite"
+          imageSrc={`${process.env.PUBLIC_URL}/assets/gitjournal-feature-image.png`}
       />
       <div className="p-20 hidden md:block" style={{ background: 'antiquewhite', color: '#50abd7' }}>
         <div id={'download'} className="max-w-screen-lg mx-auto pt-8">
