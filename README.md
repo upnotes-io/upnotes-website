@@ -1,8 +1,19 @@
 # Upnotes 
 
-[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/upnotes)
+We are trying to build best and open notes app for developers. Download latest releases on https://upnotes.io
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a repository for upnotes website and releases. This can be used for any new issues and discussion. 
+Please join [discord community](https://discord.gg/ATZTMeyWsW) for any real time help and discussion.
+Please star the repository to support us.
+
+# Contributions
+Upnotes is not open source but we have few libraries that are used as part of upnotes that are open source. 
+
+* https://github.com/upnotes-io/react-todo
+* https://github.com/upnotes-io/fuzzy-search-fs
+* https://github.com/upnotes-io/notes-template
+
+
 
 ## Available Scripts
 
