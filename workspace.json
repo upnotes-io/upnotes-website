@@ -2,6 +2,7 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "upnotes-app": "apps/upnotes-app",
     "upnotes-web": "apps/upnotes-web",
     "upnotes-web-e2e": "apps/upnotes-web-e2e"
   }

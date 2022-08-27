@@ -40,5 +40,8 @@
       }
     }
   },
-  "defaultProject": "upnotes-web"
+  "defaultProject": "upnotes-web",
+  "cli": {
+    "defaultCollection": "nx-electron"
+  }
 }

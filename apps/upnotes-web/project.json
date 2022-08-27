@@ -5,7 +5,9 @@
   "targets": {
     "build": {
       "executor": "@nrwl/web:webpack",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "defaultConfiguration": "production",
       "options": {
         "compiler": "babel",
@@ -19,7 +21,9 @@
           "apps/upnotes-web/src/favicon.ico",
           "apps/upnotes-web/src/assets"
         ],
-        "styles": ["apps/upnotes-web/src/styles.scss"],
+        "styles": [
+          "apps/upnotes-web/src/styles.scss"
+        ],
         "scripts": [],
         "webpackConfig": "@nrwl/react/plugins/webpack"
       },
@@ -51,7 +55,8 @@
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "upnotes-web:build",
-        "hmr": true
+        "hmr": true,
+        "proxyConfig": "apps/upnotes-web/proxy.conf.json"
       },
       "configurations": {
         "development": {
@@ -65,14 +70,20 @@
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
-        "lintFilePatterns": ["apps/upnotes-web/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": [
+          "apps/upnotes-web/**/*.{ts,tsx,js,jsx}"
+        ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/upnotes-web"],
+      "outputs": [
+        "coverage/apps/upnotes-web"
+      ],
       "options": {
         "jestConfig": "apps/upnotes-web/jest.config.ts",
         "passWithNoTests": true
