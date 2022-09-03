@@ -6,6 +6,8 @@ import ReactGA from 'react-ga';
 import FeatureTemplate from './FeatureTemplate';
 import { Modal, Box} from '@material-ui/core';
 import SubscribeForm from "./SubscribeForm";
+import Footer from './Footer';
+import Header from './Header';
 
 const style = {
   position: 'absolute',
@@ -75,6 +77,8 @@ export default function Home() {
   }, [tag]);
 
   return (
+    <>
+    <Header/>
     <div>
       <div className="flex justify-center items-center" style={{ background: '#fff' }}>
         <div className="max-w-screen-lg pt-24 pb-16"  >
@@ -175,5 +179,7 @@ export default function Home() {
         </Modal>
       </div>
     </div>
+    <Footer/>
+    </>
   )
 }

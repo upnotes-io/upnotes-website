@@ -6,6 +6,13 @@ import Footer from './pages/home/Footer';
 import Header from './pages/home/Header';
 import Home from './pages/home/Home';
 import ReactGA from 'react-ga';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+import Notes from './pages/notes/Index';
 function App() {
 
   React.useEffect(()=>{
@@ -21,11 +28,22 @@ function App() {
   })
 
   return (
-    <>
-      <Header/>
-        <Home />
-      <Footer />
-    </>
+
+    <Router>
+    <div>
+
+
+      {/* A <Switch> looks through its children <Route>s and
+          renders the first one that matches the current URL. */}
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/notes" element={<Notes/>}/>
+      </Routes>
+
+    </div>
+
+  </Router>
+
   );
 }
 
