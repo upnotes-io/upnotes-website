@@ -13,7 +13,6 @@ jobs:
         with:
           node-version: 16
           cache: 'npm'
-      - run: npm install
       - name: build
         uses: mansagroup/nrwl-nx-action@v2 # https://github.com/marketplace/actions/nrwl-nx
         with:
