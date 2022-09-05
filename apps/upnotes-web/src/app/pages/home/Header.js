@@ -5,17 +5,17 @@ import {
   makeStyles,
   IconButton,
   Drawer,
-} from "@material-ui/core";
-import MenuIcon from "@material-ui/icons/Menu";
-import React, { useState, useEffect } from "react";
-import Icon from "@material-ui/core/Icon";
+} from '@material-ui/core';
+import MenuIcon from '@material-ui/icons/Menu';
+import React, { useState, useEffect } from 'react';
+import Icon from '@material-ui/core/Icon';
 import ReactGA from 'react-ga';
 const headersData = [
   {
-    label: "Report Issue",
-    href: "https://github.com/upnotes-io/upnotes-website/issues/new",
-    target: "_blank",
-    eventLabel: "report_issue",
+    label: 'Report Issue',
+    href: 'https://github.com/upnotes-io/upnotes-website/issues/new',
+    target: '_blank',
+    eventLabel: 'report_issue',
   },
   // {
   //   label: "Blogs",
@@ -23,57 +23,57 @@ const headersData = [
   //   target: "none",
   // },
   {
-    label: "Download",
-    href: "#download",
-    eventLabel: "download_header",
+    label: 'Download',
+    href: '#download',
+    eventLabel: 'download_header',
   },
 ];
 
 const useStyles = makeStyles(() => ({
   header: {
     background: '#f9b296',
-    paddingRight: "79px",
-    paddingLeft: "79px",
-    "@media (max-width: 900px)": {
+    paddingRight: '79px',
+    paddingLeft: '79px',
+    '@media (max-width: 900px)': {
       paddingLeft: 0,
     },
   },
   logo: {
-    fontFamily: "Work Sans, sans-serif",
+    fontFamily: 'Work Sans, sans-serif',
     fontWeight: 600,
-    color: "black",
-    textAlign: "left",
+    color: 'black',
+    textAlign: 'left',
     paddingLeft: 6,
   },
   menuButton: {
-    fontFamily: "Open Sans, sans-serif",
+    fontFamily: 'Open Sans, sans-serif',
     fontWeight: 700,
-    size: "18px",
-    marginLeft: "38px",
-    color: "black",
+    size: '18px',
+    marginLeft: '38px',
+    color: 'black',
   },
   toolbar: {
-    display: "flex",
-    justifyContent: "space-between",
+    display: 'flex',
+    justifyContent: 'space-between',
   },
   drawerContainer: {
-    padding: "20px 30px",
+    padding: '20px 30px',
   },
   imageIcon: {
-    display: "flex",
-    height: "inherit",
-    width: "inherit",
-    alignSelf: "center",
+    display: 'flex',
+    height: 'inherit',
+    width: 'inherit',
+    alignSelf: 'center',
   },
   iconRoot: {
-    textAlign: "center",
-    height: "48px",
-    width: "48px",
+    textAlign: 'center',
+    height: '48px',
+    width: '48px',
   },
   headerBrand: {
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
   },
 }));
 
@@ -105,7 +105,7 @@ export default function Header() {
 
     setResponsiveness();
 
-    window.addEventListener("resize", () => setResponsiveness());
+    window.addEventListener('resize', () => setResponsiveness());
   }, []);
 
   const displayDesktop = () => {
@@ -127,10 +127,10 @@ export default function Header() {
       <Toolbar>
         <IconButton
           {...{
-            edge: "start",
-            color: "inherit",
-            "aria-label": "menu",
-            "aria-haspopup": "true",
+            edge: 'start',
+            color: 'inherit',
+            'aria-label': 'menu',
+            'aria-haspopup': 'true',
             onClick: handleDrawerOpen,
           }}
         >
@@ -139,12 +139,14 @@ export default function Header() {
 
         <Drawer
           {...{
-            anchor: "left",
+            anchor: 'left',
             open: drawerOpen,
             onClose: handleDrawerClose,
           }}
         >
-          <div className={`${drawerContainer} flex flex-col`}>{getDrawerChoicesMobile()}</div>
+          <div className={`${drawerContainer} flex flex-col`}>
+            {getDrawerChoicesMobile()}
+          </div>
         </Drawer>
 
         <div>{upnotesLogo}</div>
@@ -158,8 +160,8 @@ export default function Header() {
         <a
           {...{
             href: href,
-            color: "inherit",
-            style: { textDecoration: "none" },
+            color: 'inherit',
+            style: { textDecoration: 'none' },
             key: label,
             target,
           }}
@@ -187,7 +189,7 @@ export default function Header() {
         <ReactGA.OutboundLink
           {...{
             key: label,
-            color: "inherit",
+            color: 'inherit',
             to: href,
             eventLabel: eventLabel,
             target,

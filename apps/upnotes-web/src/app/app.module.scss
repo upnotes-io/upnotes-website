@@ -3,7 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .laptop {
   position: relative;
   margin: auto;
@@ -24,7 +23,7 @@
   display: block;
   max-width: 100%;
   height: auto;
-  aspect-ratio: attr(width)/attr(height);
+  aspect-ratio: attr(width) / attr(height);
   background: #000;
 }
 .laptop .laptop__bottom {
@@ -34,7 +33,15 @@
   margin-left: -7%;
   height: 0.7rem;
   background: #e9eff5;
-  background-image: linear-gradient(to right, #d2dde9 0%, #f9fcff 15%, #e5ebf2 40%, #e5ebf2 60%, #f9fcff 85%, #d2dde9 100%);
+  background-image: linear-gradient(
+    to right,
+    #d2dde9 0%,
+    #f9fcff 15%,
+    #e5ebf2 40%,
+    #e5ebf2 60%,
+    #f9fcff 85%,
+    #d2dde9 100%
+  );
 }
 .laptop .laptop__bottom::before {
   display: block;
@@ -43,8 +50,14 @@
   height: 0.7rem;
   border-radius: 0 0 0.2rem 0.2rem;
   background: #f6f9fc;
-  background-image: linear-gradient(to right, #c3cfdb 0%, #f6f9fc 10%, #f6f9fc 90%, #c3cfdb 100%);
-  content: " ";
+  background-image: linear-gradient(
+    to right,
+    #c3cfdb 0%,
+    #f6f9fc 10%,
+    #f6f9fc 90%,
+    #c3cfdb 100%
+  );
+  content: ' ';
 }
 .laptop .laptop__under {
   position: absolute;
@@ -56,7 +69,8 @@
   background: #e2e8f0;
   background-image: linear-gradient(to bottom, #e2e8f0, #bec7d1);
 }
-.laptop .laptop__under::after, .laptop .laptop__under::before {
+.laptop .laptop__under::after,
+.laptop .laptop__under::before {
   position: absolute;
   top: 0%;
   right: 100%;
@@ -65,7 +79,7 @@
   width: 50%;
   border-bottom-left-radius: 100%;
   background: inherit;
-  content: " ";
+  content: ' ';
 }
 .laptop .laptop__under::after {
   right: auto;
