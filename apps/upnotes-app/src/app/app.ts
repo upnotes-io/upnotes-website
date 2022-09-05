@@ -98,8 +98,9 @@ export default class App {
   private static loadMainWindow() {
     // load the index.html of the app.
     if (!App.application.isPackaged) {
-      App.mainWindow.loadURL(`http://localhost:${rendererAppPort}`);
+      App.mainWindow.loadURL(`http://localhost:${rendererAppPort}/notes`);
     } else {
+      //App.mainWindow.addListener
       App.mainWindow.loadURL(
         format({
           pathname: join(__dirname, '..', rendererAppName, 'index.html'),
