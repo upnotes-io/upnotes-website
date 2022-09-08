@@ -13,11 +13,7 @@ jobs:
         with:
           node-version: 14
       - run: npm ci
-      - name: build
-        uses: mansagroup/nrwl-nx-action@v2 # https://github.com/marketplace/actions/nrwl-nx
-        with:
-          targets: build
-          projects: upnotes-web
+      - run: nx build upnotes-web
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
