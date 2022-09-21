@@ -150,7 +150,7 @@ export default function Home() {
         <FeatureTemplate
           title="Powered with git."
           description="All your notes are saved in markdown format. We init git to notes directory and do commit periodically to make sure you can go back in history and do not lose anything"
-          backgroundColor="#fff"
+          backgroundColor="antiquewhite"
           list={[
             'You just write your notes and we do commit your notes time to time',
             'No more worries of losing notes',
@@ -159,10 +159,10 @@ export default function Home() {
           imageSrc={`assets/github-sync.png`}
         />
         <FeatureTemplate
-          title="Focus mode and todo support"
-          description="To just focus on writing notes switch to focus mode and add todos"
+          title="Todo support"
+          description="Simple todo list for each task. You can create a subpage with type todo editor."
           backgroundColor="#fff"
-          imageSrc={`assets/todo-fullscreen.png`}
+          imageSrc={`assets/todo-editor.png`}
         />
         <FeatureTemplate
           title="GitJournal support for iOS and android"
