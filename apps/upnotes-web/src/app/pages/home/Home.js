@@ -95,7 +95,7 @@ export default function Home() {
                 A notes app for software developers
               </h2>
               <p className="text-md sm:text-lg tracking-wide text-center pt-6 leading-8">
-                Markdown first, Powered with VS Code and Git.
+                Developer focused with editors like VS code, Markdown, Diff, Formatter etc.
               </p>
               <div className="hidden md:block">
                 <div className="flex justify-center pt-8">
@@ -134,11 +134,18 @@ export default function Home() {
           </div>
         </div>
         <FeatureTemplate
-          title="Powered with VS Code editor"
-          description="We believe simple vs code editor make more sense for developers to take note but you can also toggle to markdown editor as well if needed."
+          title="Powered with editors like VS code, Markdown, Diff, Formatter etc"
+          description="We believe that developers need more then just plane editor to capture the ideas and the context for any task. That's why we have support for multiple editors."
           backgroundColor="antiquewhite"
           flexDirection="flex-row-reverse"
-          imageSrc={`assets/vscode.png`}
+          imageSrc={`assets/editor-types.png`}
+        />
+        <FeatureTemplate
+          title="Full hierarchy support for notes."
+          description="You can create subpages inside any page."
+          backgroundColor="#fff"
+          flexDirection="flex-row-reverse"
+          imageSrc={`assets/vscode-editor.png`}
         />
         <FeatureTemplate
           title="Powered with git."
@@ -150,13 +157,6 @@ export default function Home() {
             'Sync your notes to github or gitlab because your notes only belongs you.',
           ]}
           imageSrc={`assets/github-sync.png`}
-        />
-        <FeatureTemplate
-          title="Auto organized notes"
-          description="Configure your workplace. Upnotes create 3 notebooks ( git tasks, tasks and wiki ) for each repository and git task creates note for new branch automatically."
-          backgroundColor="antiquewhite"
-          flexDirection="flex-row-reverse"
-          imageSrc={`assets/current-branch-screen.png`}
         />
         <FeatureTemplate
           title="Focus mode and todo support"
