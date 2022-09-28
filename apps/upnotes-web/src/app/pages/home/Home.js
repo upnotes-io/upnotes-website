@@ -165,9 +165,15 @@ export default function Home() {
           imageSrc={`assets/todo-editor.png`}
         />
         <FeatureTemplate
+          title="Diagram support using mermaid"
+          description="Writing design docs becomes lot easier with diagram support. Generation of diagram and flowchart from text in a similar manner as markdown using mermaid. Real time editor to create mermaid diagrams."
+          backgroundColor="antiquewhite"
+          imageSrc={`assets/diagram.png`}
+        />
+        <FeatureTemplate
           title="GitJournal support for iOS and android"
           description="For quick access to your notes, we support GitJournal for iOS and android. You can use git sync to sync across mobile and your desktop."
-          backgroundColor="antiquewhite"
+          backgroundColor="#fff"
           imageSrc={`assets/gitjournal-feature-image.png`}
         />
         <div
