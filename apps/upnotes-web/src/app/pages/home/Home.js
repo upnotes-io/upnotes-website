@@ -95,7 +95,7 @@ export default function Home() {
                 A notes app for software developers
               </h2>
               <p className="text-md sm:text-lg tracking-wide text-center pt-6 leading-8">
-                Developer focused with editors like VS code, Markdown, Diff, Formatter etc.
+                Developer focused with editors like VS code, Markdown, Diagram, Diff, Formatter....
               </p>
               <div className="hidden md:block">
                 <div className="flex justify-center pt-8">
@@ -134,7 +134,7 @@ export default function Home() {
           </div>
         </div>
         <FeatureTemplate
-          title="Powered with editors like VS code, Markdown, Diff, Formatter etc"
+          title="Powered with editors like VS code, Markdown, Diagram, Diff, Formatter...."
           description="We believe that developers need more then just plane editor to capture the ideas and the context for any task. That's why we have support for multiple editors."
           backgroundColor="antiquewhite"
           flexDirection="flex-row-reverse"
