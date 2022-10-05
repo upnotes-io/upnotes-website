@@ -135,7 +135,7 @@ export default function Home() {
         </div>
         <FeatureTemplate
           title="Powered with editors like VS code, Markdown, Diagram, Diff, Formatter...."
-          description="We believe that developers need more then just plane editor to capture the ideas and the context for any task. That's why we have support for multiple editors."
+          description="We believe that developers need more then just a plain editor to capture the ideas and the context for any task. That's why we have support for multiple editors."
           backgroundColor="antiquewhite"
           flexDirection="flex-row-reverse"
           imageSrc={`assets/editor-types.png`}
