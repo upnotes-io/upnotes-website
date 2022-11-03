@@ -2,12 +2,12 @@
 import styles from './app.module.scss';
 
 import React from 'react';
-import Footer from './pages/home/Footer';
-import Header from './pages/home/Header';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
 import Home from './pages/home/Home';
 import ReactGA from 'react-ga';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Notes from './pages/notes/Index';
+import DownloadPage from './pages/Download/Index';
 function App() {
   React.useEffect(() => {
     console.log('env:' + process.env['NODE_ENV']);
@@ -27,8 +27,8 @@ function App() {
         {/* A <Switch> looks through its children <Route>s and
           renders the first one that matches the current URL. */}
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/notes" element={<Notes />} />
+          <Route path="/" element={<DownloadPage />} />
+          <Route path="/feature-list" element={<Home />} />
         </Routes>
       </div>
     </Router>
