@@ -24,7 +24,7 @@ const style = {
   boxShadow: 24,
 };
 
-export default function Home() {
+export default function FeatureList() {
   let [tag, setTag] = useState(null);
 
   const [openModel, setOpenModel] = React.useState(false);

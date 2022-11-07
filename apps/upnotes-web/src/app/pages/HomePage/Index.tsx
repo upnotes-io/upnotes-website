@@ -11,7 +11,7 @@ import {
 import { useEffect, useState } from 'react';
 import React from 'react';
 
-export default function DownloadPage() {
+export default function HomePage() {
   const [tag, setTag] = useState(null);
   const [text, setText] = useState('text');
   const [openModel, setOpenModel] = React.useState(false);
