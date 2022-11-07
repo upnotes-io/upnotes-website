@@ -1,5 +1,5 @@
 import React from 'react';
-import SubscribeForm from './SubscribeForm';
+import SubscribeForm from '../app/pages/home/SubscribeForm';
 
 const Footer = function () {
   return (

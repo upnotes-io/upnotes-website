@@ -10,8 +10,8 @@ import ReactGA from 'react-ga';
 import FeatureTemplate from './FeatureTemplate';
 import { Modal, Box } from '@material-ui/core';
 import SubscribeForm from './SubscribeForm';
-import Footer from './Footer';
-import Header from './Header';
+import Footer from '../../../components/Footer';
+import Header from '../../../components/Header';
 
 const style = {
   position: 'absolute',
@@ -24,7 +24,7 @@ const style = {
   boxShadow: 24,
 };
 
-export default function Home() {
+export default function FeatureList() {
   let [tag, setTag] = useState(null);
 
   const [openModel, setOpenModel] = React.useState(false);
@@ -85,7 +85,7 @@ export default function Home() {
     <>
       <Header />
       <div>
-        <div
+        {/* <div
           className="flex justify-center items-center"
           style={{ background: '#fff' }}
         >
@@ -132,7 +132,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         <FeatureTemplate
           title="Powered with editors like VS code, Markdown, Diagram, Diff, Formatter...."
           description="We believe that developers need more then just a plain editor to capture the ideas and the context for any task. That's why we have support for multiple editors."
