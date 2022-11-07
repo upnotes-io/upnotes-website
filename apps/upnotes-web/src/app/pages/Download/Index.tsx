@@ -92,14 +92,20 @@ export default function DownloadPage() {
           style={{ background: '#fff' }}
         >
           <div className="max-w-screen-lg pt-24 pb-16">
-            <div className="mx-1">
-              <h2 className="text-3xl sm:text-5xl tracking-wider text-center pt-14">
+            <div className="mx-1 flex flex-col items-center">
+              <h2 className="text-3xl sm:text-3xl tracking-wider text-center pt-14" style={{maxWidth: '700px'}}>
                 Capture context for each task
               </h2>
-              <p className="text-md sm:text-lg tracking-wide text-center pt-6 leading-8">
-                Developer focused with editors like VS code, Markdown, Diagram, Diff, Formatter....
-              </p>
               <div className="hidden md:block">
+                {/* <div className="flex justify-center pt-8 text-2xl">
+                  <h4> Why upnotes?</h4>
+                </div> */}
+                <ul className="flex flex-col justify-center pt-8 list-disc " >
+                  <li className='p-2'>Connect note-taking with your git repositories. It will create a new note automatically for the new branch. </li>
+                  <li className='p-2'>Create todos, diagrams, use tools like formatter in the context of your repository and branch.</li>
+                  <li className='p-2'>Free of cost, completely local with no serverside.</li>
+                  <li className='p-2'>Keep all your notes locally in a git repo and sync with any git server like github/gitlab etc.</li>
+                </ul>
                 <div className="flex justify-center pt-8">
                   <ReactGA.OutboundLink
                     style={{ backgroundColor: '#f16f3d' }}
@@ -111,14 +117,18 @@ export default function DownloadPage() {
                     <span> Download for free </span>
                   </ReactGA.OutboundLink>
                 </div>
-                <div className="flex justify-center pt-8">
-                  <p>
-                    Compatible with{' '}
-                    <a className="font-bold" href="https://gitjournal.io/">
-                      GitJournal
-                    </a>{' '}
-                    for iOS and android support.
-                  </p>
+                {/* <div className="flex justify-center pt-8 text-md">
+                  <h4> Still not sure?</h4>
+                </div> */}
+                <ul className="flex flex-col justify-center pt-8 list-disc " >
+                  {/* <li><a href='' >See video </a></li> */}
+                  <li className='p-2'><a href='/feature-list' className='text-blue-500 underline' >See detailed features list</a></li>
+                  <li className='p-2'><a className='text-blue-500 underline' target="blank" href='https://blog.upnotes.io/notes/2022/07/05/why-taking-good-notes-is-critical.html' > Read blog</a></li>
+                  <li className='p-2'><a className='text-blue-500 underline' href='https://discord.gg/ATZTMeyWsW' target="blank" >Ask question in discord</a></li>
+                  {/* <li><a href='' >Schedule a meeting with us.</a></li> */}
+                </ul>
+                <div className="flex justify-center pt-8 text-2xl">
+                  <h4> <a className='text-blue-500 underline' href="https://github.com/upnotes-io/upnotes-website/issues/10" target="blank">Don't like the app? Help us.</a></h4>
                 </div>
               </div>
               <div className="sm:hidden ">
