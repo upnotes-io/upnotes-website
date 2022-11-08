@@ -101,10 +101,10 @@ export default function HomePage() {
                   <h4> Why upnotes?</h4>
                 </div> */}
                 <ul className="flex flex-col justify-center pt-8 list-disc sm:list-disc" >
-                  <li className='m-4'>Connect note-taking with your git repositories. It will create a new note automatically for the new branch. </li>
-                  <li className='m-4'>Create todos, diagrams, use tools like formatter in the context of your repository and branch.</li>
-                  <li className='m-4'>Free of cost, completely local with no serverside.</li>
-                  <li className='m-4'>Keep all your notes locally in a git repo and sync with any git server like github/gitlab etc.</li>
+                  <li className='m-2 ml-4'>Connect note-taking with your git repositories. It will create a new note automatically for the new branch. </li>
+                  <li className='m-2 ml-4'>Create todos, diagrams, use tools like formatter in the context of your repository and branch.</li>
+                  <li className='m-2 ml-4'>Free of cost, completely local with no serverside.</li>
+                  <li className='m-2 ml-4'>Keep all your notes locally in a git repo and sync with any git server like github/gitlab etc.</li>
                 </ul>
                 <div className="flex justify-center pt-8">
                   <ReactGA.OutboundLink
@@ -122,9 +122,9 @@ export default function HomePage() {
                 </div> */}
                 <ul className="flex flex-col justify-center pt-8 list-disc " >
                   {/* <li><a href='' >See video </a></li> */}
-                  <li className='m-4'><a href='/feature-list' className='text-blue-500 underline' >See detailed features list</a></li>
-                  <li className='m-4'><a className='text-blue-500 underline' target="blank" href='https://blog.upnotes.io/notes/2022/07/05/why-taking-good-notes-is-critical.html' > Read blog</a></li>
-                  <li className='m-4'><a className='text-blue-500 underline' href='https://discord.gg/ATZTMeyWsW' target="blank" >Ask question in discord</a></li>
+                  <li className='m-2 ml-4'><a href='/feature-list' className='text-blue-500 underline' >See detailed features list</a></li>
+                  <li className='m-2 ml-4'><a className='text-blue-500 underline' target="blank" href='https://blog.upnotes.io/notes/2022/07/05/why-taking-good-notes-is-critical.html' > Read blog</a></li>
+                  <li className='m-2 ml-4'><a className='text-blue-500 underline' href='https://discord.gg/ATZTMeyWsW' target="blank" >Ask question in discord</a></li>
                   {/* <li><a href='' >Schedule a meeting with us.</a></li> */}
                 </ul>
                 <div className="flex justify-center pt-8 text-2xl">
