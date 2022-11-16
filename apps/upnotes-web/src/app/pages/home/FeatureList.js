@@ -134,6 +134,13 @@ export default function FeatureList() {
           </div>
         </div> */}
         <FeatureTemplate
+          title="Configure your git repo to create page for each branch"
+          description="Take all your repository notes inside a git repo page"
+          backgroundColor="#fff"
+          flexDirection="flex-row-reverse"
+          imageSrc={`assets/git-repo-page.png`}
+        />
+        <FeatureTemplate
           title="Powered with editors like VS code, Markdown, Diagram, Diff, Formatter...."
           description="We believe that developers need more then just a plain editor to capture the ideas and the context for any task. That's why we have support for multiple editors."
           backgroundColor="antiquewhite"
