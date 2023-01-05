@@ -4,7 +4,7 @@ import styles from './app.module.scss';
 import React from 'react';
 import FeatureList from './pages/home/FeatureList';
 import ReactGA from 'react-ga';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, BrowserRouter } from 'react-router-dom';
 import HomePage from './pages/HomePage/Index';
 function App() {
   React.useEffect(() => {
@@ -20,7 +20,7 @@ function App() {
   });
 
   return (
-    <Router>
+    <BrowserRouter>
       <div>
         {/* A <Switch> looks through its children <Route>s and
           renders the first one that matches the current URL. */}
@@ -29,7 +29,7 @@ function App() {
           <Route path="/feature-list" element={<FeatureList />} />
         </Routes>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 

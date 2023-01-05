@@ -10,6 +10,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { useEffect, useState } from 'react';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function HomePage() {
   const [tag, setTag] = useState(null);
@@ -122,7 +123,7 @@ export default function HomePage() {
                 </div> */}
                 <ul className="flex flex-col justify-center pt-8 list-disc " >
                   {/* <li><a href='' >See video </a></li> */}
-                  <li className='m-2 ml-4'><a href='/feature-list' className='text-blue-500 underline' >See detailed features list</a></li>
+                  <li className='m-2 ml-4'><Link to='feature-list' className='text-blue-500 underline' >See detailed features list</Link></li>
                   <li className='m-2 ml-4'><a className='text-blue-500 underline' target="blank" href='https://blog.upnotes.io/notes/2022/07/05/why-taking-good-notes-is-critical.html' > Read blog</a></li>
                   <li className='m-2 ml-4'><a className='text-blue-500 underline' href='https://discord.gg/ATZTMeyWsW' target="blank" >Ask question in discord</a></li>
                   {/* <li><a href='' >Schedule a meeting with us.</a></li> */}
