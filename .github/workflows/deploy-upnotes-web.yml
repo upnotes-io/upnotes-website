@@ -13,7 +13,7 @@ jobs:
         with:
           node-version: 14
       - run: npm ci
-      - run: npx nx build upnotes-web
+      - run: npx nx build upnotes-web --deployUrl=https://upnotes-io.github.io/upnotes-website/
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
@@ -22,4 +22,3 @@ jobs:
           CLEAN: true
           SSH: true
           ssh-key: ${{ secrets.GH_PAGES_PRIVATE_KEY }}
-          target-folder: 'upnotes-website'
