@@ -22,3 +22,4 @@ jobs:
           CLEAN: true
           SSH: true
           ssh-key: ${{ secrets.GH_PAGES_PRIVATE_KEY }}
+          target-folder: 'upnotes-website'
